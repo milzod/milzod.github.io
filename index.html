@@ -38,25 +38,6 @@
             opacity: 0.95;
             font-size: 1.1rem;
         }
-        .install-prompt {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 18px 20px 12px 20px;
-            margin: 20px;
-            border-radius: 18px;
-            text-align: center;
-        }
-        .install-btn {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border: 2px solid rgba(255,255,255,0.3);
-            padding: 10px 24px;
-            border-radius: 8px;
-            margin-top: 10px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1rem;
-        }
         .nav-tabs {
             display: flex;
             background: #f8f9fa;
@@ -324,6 +305,147 @@
                 </div>
             `);
         }
+        function showWeatherForecastModal() {
+            showModal(`
+                <span class='modal-close' onclick='closeModal()'>&times;</span>
+                <h2 style="margin-bottom:10px;">Big Island 7-Day Weather Forecast</h2>
+                <table style="width:100%;border-collapse:separate;border-spacing:0 8px;font-size:1.07rem;margin-bottom:10px;">
+                  <tr style="background:none;font-weight:600;text-align:left;">
+                    <th style='padding:6px 0;'>Date</th>
+                    <th style='padding:6px 0;'>Weather</th>
+                    <th style='padding:6px 0;'>Temp</th>
+                    <th style='padding:6px 0;'>Description</th>
+                  </tr>
+                  <tr style="background:#f8fafc;border-radius:8px;">
+                    <td style='padding:6px 0 6px 4px;'>July 3</td>
+                    <td style='font-size:1.4em;'>🌤️</td>
+                    <td>82°F</td>
+                    <td>Partly Cloudy, 20% Rain</td>
+                  </tr>
+                  <tr style="background:#f8fafc;">
+                    <td style='padding:6px 0 6px 4px;'>July 4</td>
+                    <td style='font-size:1.4em;'>☀️</td>
+                    <td>83°F</td>
+                    <td>Mostly Sunny, 10% Rain</td>
+                  </tr>
+                  <tr style="background:#f8fafc;">
+                    <td style='padding:6px 0 6px 4px;'>July 5</td>
+                    <td style='font-size:1.4em;'>☀️</td>
+                    <td>84°F</td>
+                    <td>Sunny, 5% Rain</td>
+                  </tr>
+                  <tr style="background:#f8fafc;">
+                    <td style='padding:6px 0 6px 4px;'>July 6</td>
+                    <td style='font-size:1.4em;'>☁️</td>
+                    <td>79°F</td>
+                    <td>Cloudy, 15% Rain</td>
+                  </tr>
+                  <tr style="background:#f8fafc;">
+                    <td style='padding:6px 0 6px 4px;'>July 7</td>
+                    <td style='font-size:1.4em;'>🌤️</td>
+                    <td>85°F</td>
+                    <td>Mostly Sunny, 10% Rain</td>
+                  </tr>
+                  <tr style="background:#f8fafc;">
+                    <td style='padding:6px 0 6px 4px;'>July 8</td>
+                    <td style='font-size:1.4em;'>🌤️</td>
+                    <td>82°F</td>
+                    <td>Partly Cloudy, 20% Rain</td>
+                  </tr>
+                  <tr style="background:#f8fafc;">
+                    <td style='padding:6px 0 6px 4px;'>July 9</td>
+                    <td style='font-size:1.4em;'>🌤️</td>
+                    <td>81°F</td>
+                    <td>Partly Cloudy, 15% Rain</td>
+                  </tr>
+                </table>
+                <div style="font-size:0.98rem;color:#666;">Forecast is approximate. Weather can change quickly on the island!</div>
+            `);
+        }
+        function showHourlyForecastModal(day) {
+            // Example hourly data for each day
+            const hourlyData = {
+                'July 3': [
+                    { time: '8 AM', temp: '77°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '10 AM', temp: '79°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '12 PM', temp: '81°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '2 PM', temp: '82°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '4 PM', temp: '81°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '6 PM', temp: '80°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '8 PM', temp: '78°F', icon: '🌙', desc: 'Mostly Clear' }
+                ],
+                'July 4': [
+                    { time: '8 AM', temp: '78°F', icon: '☀️', desc: 'Sunny' },
+                    { time: '10 AM', temp: '80°F', icon: '☀️', desc: 'Sunny' },
+                    { time: '12 PM', temp: '82°F', icon: '☀️', desc: 'Sunny' },
+                    { time: '2 PM', temp: '83°F', icon: '☀️', desc: 'Sunny' },
+                    { time: '4 PM', temp: '82°F', icon: '🌤️', desc: 'Mostly Sunny' },
+                    { time: '6 PM', temp: '81°F', icon: '🌤️', desc: 'Mostly Sunny' },
+                    { time: '8 PM', temp: '79°F', icon: '🌙', desc: 'Clear' }
+                ],
+                'July 5': [
+                    { time: '8 AM', temp: '79°F', icon: '☀️', desc: 'Sunny' },
+                    { time: '10 AM', temp: '81°F', icon: '☀️', desc: 'Sunny' },
+                    { time: '12 PM', temp: '83°F', icon: '☀️', desc: 'Sunny' },
+                    { time: '2 PM', temp: '84°F', icon: '☀️', desc: 'Sunny' },
+                    { time: '4 PM', temp: '83°F', icon: '☀️', desc: 'Sunny' },
+                    { time: '6 PM', temp: '82°F', icon: '☀️', desc: 'Sunny' },
+                    { time: '8 PM', temp: '80°F', icon: '🌙', desc: 'Clear' }
+                ],
+                'July 6': [
+                    { time: '8 AM', temp: '75°F', icon: '☁️', desc: 'Cloudy' },
+                    { time: '10 AM', temp: '77°F', icon: '☁️', desc: 'Cloudy' },
+                    { time: '12 PM', temp: '78°F', icon: '☁️', desc: 'Cloudy' },
+                    { time: '2 PM', temp: '79°F', icon: '☁️', desc: 'Cloudy' },
+                    { time: '4 PM', temp: '78°F', icon: '☁️', desc: 'Cloudy' },
+                    { time: '6 PM', temp: '77°F', icon: '☁️', desc: 'Cloudy' },
+                    { time: '8 PM', temp: '76°F', icon: '🌙', desc: 'Mostly Cloudy' }
+                ],
+                'July 7': [
+                    { time: '8 AM', temp: '80°F', icon: '🌤️', desc: 'Mostly Sunny' },
+                    { time: '10 AM', temp: '82°F', icon: '🌤️', desc: 'Mostly Sunny' },
+                    { time: '12 PM', temp: '84°F', icon: '🌤️', desc: 'Mostly Sunny' },
+                    { time: '2 PM', temp: '85°F', icon: '🌤️', desc: 'Mostly Sunny' },
+                    { time: '4 PM', temp: '84°F', icon: '🌤️', desc: 'Mostly Sunny' },
+                    { time: '6 PM', temp: '83°F', icon: '🌤️', desc: 'Mostly Sunny' },
+                    { time: '8 PM', temp: '81°F', icon: '🌙', desc: 'Clear' }
+                ],
+                'July 8': [
+                    { time: '8 AM', temp: '78°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '10 AM', temp: '80°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '12 PM', temp: '81°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '2 PM', temp: '82°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '4 PM', temp: '81°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '6 PM', temp: '80°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '8 PM', temp: '79°F', icon: '🌙', desc: 'Mostly Clear' }
+                ],
+                'July 9': [
+                    { time: '8 AM', temp: '77°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '10 AM', temp: '79°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '12 PM', temp: '80°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '2 PM', temp: '81°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '4 PM', temp: '80°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '6 PM', temp: '79°F', icon: '🌤️', desc: 'Partly Cloudy' },
+                    { time: '8 PM', temp: '78°F', icon: '🌙', desc: 'Mostly Clear' }
+                ]
+            };
+            const hours = hourlyData[day] || [];
+            let rows = hours.map(h => `<tr style='background:#f8fafc;'><td style='padding:6px 0 6px 4px;'>${h.time}</td><td style='font-size:1.3em;'>${h.icon}</td><td>${h.temp}</td><td>${h.desc}</td></tr>`).join('');
+            showModal(`
+                <span class='modal-close' onclick='closeModal()'>&times;</span>
+                <h2 style='margin-bottom:10px;'>${day} Hourly Forecast</h2>
+                <table style='width:100%;border-collapse:separate;border-spacing:0 8px;font-size:1.07rem;margin-bottom:10px;'>
+                  <tr style='background:none;font-weight:600;text-align:left;'>
+                    <th style='padding:6px 0;'>Time</th>
+                    <th style='padding:6px 0;'>Weather</th>
+                    <th style='padding:6px 0;'>Temp</th>
+                    <th style='padding:6px 0;'>Description</th>
+                  </tr>
+                  ${rows}
+                </table>
+                <div style='font-size:0.98rem;color:#666;'>Forecast is approximate. Weather can change quickly on the island!</div>
+            `);
+        }
     </script>
 </head>
 <body>
@@ -331,10 +453,6 @@
         <div class="header">
             <h1>🌺 Hawaii Big Island</h1>
             <p>Family Adventure • July 3-9, 2025</p>
-        </div>
-        <div class="install-prompt">
-            <div>📱 Add this app to your home screen for easy access!</div>
-            <button class="install-btn" onclick="alert('On iPhone: Share > Add to Home Screen. On Android: Menu > Add to Home Screen.')">How to Install</button>
         </div>
         <div class="nav-tabs">
             <button class="nav-tab active" onclick="showTab('itinerary')">📅 Schedule</button>
@@ -344,23 +462,7 @@
             <button class="nav-tab" onclick="showTab('contacts')">📞 Contacts</button>
         </div>
         <div id="itinerary" class="tab-content active">
-            <div class="flight-info">
-                <div class="flight-details">
-                    <div>
-                        <div class="flight-time">July 3 - Departure</div>
-                        <div>SLC → Kona (KOA)</div>
-                    </div>
-                    <div>✈️</div>
-                </div>
-                <div class="flight-details">
-                    <div>
-                        <div class="flight-time">July 9 - Return</div>
-                        <div>Kona (KOA) → SLC</div>
-                    </div>
-                    <div>🏠</div>
-                </div>
-            </div>
-            <div class="weather-widget">
+            <div class="weather-widget" onclick="showWeatherForecastModal()">
                 <div class="weather-temp">82°F</div>
                 <div>Partly Cloudy • Perfect for exploring!</div>
                 <div class="weather-details">
@@ -373,7 +475,7 @@
             <div class="day-card">
                 <div class="day-header">
                     <div>July 3 - Arrival Day</div>
-                    <div class="weather-badge">🌤️ 81°F</div>
+                    <div class="weather-badge" onclick="showHourlyForecastModal('July 3')">🌤️ 81°F</div>
                 </div>
                 <div class="day-content">
                     <div class="activity">
@@ -406,7 +508,7 @@
             <div class="day-card">
                 <div class="day-header">
                     <div>July 4 - Independence Day</div>
-                    <div class="weather-badge">☀️ 83°F</div>
+                    <div class="weather-badge" onclick="showHourlyForecastModal('July 4')">☀️ 83°F</div>
                 </div>
                 <div class="day-content">
                     <div class="activity">
@@ -422,7 +524,7 @@
             <div class="day-card">
                 <div class="day-header">
                     <div>July 5 - Beach & Manta Rays</div>
-                    <div class="weather-badge">🌤️ 84°F</div>
+                    <div class="weather-badge" onclick="showHourlyForecastModal('July 5')">🌤️ 84°F</div>
                 </div>
                 <div class="day-content">
                     <div class="activity">
@@ -451,7 +553,7 @@
             <div class="day-card">
                 <div class="day-header">
                     <div>July 6 - Volcanoes & Magic Sands</div>
-                    <div class="weather-badge">⛅ 79°F</div>
+                    <div class="weather-badge" onclick="showHourlyForecastModal('July 6')">⛅ 79°F</div>
                 </div>
                 <div class="day-content">
                     <div class="activity">
@@ -483,7 +585,7 @@
             <div class="day-card">
                 <div class="day-header">
                     <div>July 7 - Beach & Sunset Cruise</div>
-                    <div class="weather-badge">☀️ 85°F</div>
+                    <div class="weather-badge" onclick="showHourlyForecastModal('July 7')">☀️ 85°F</div>
                 </div>
                 <div class="day-content">
                     <div class="activity">
@@ -520,7 +622,7 @@
             <div class="day-card">
                 <div class="day-header">
                     <div>July 8 - Free Day</div>
-                    <div class="weather-badge">🌤️ 82°F</div>
+                    <div class="weather-badge" onclick="showHourlyForecastModal('July 8')">🌤️ 82°F</div>
                 </div>
                 <div class="day-content">
                     <div class="activity">
@@ -572,7 +674,23 @@
             <p>Trip info, tips, and emergency contacts coming soon!</p>
         </div>
         <div id="contacts" class="tab-content">
-            <p>Family contacts and group chat links coming soon!</p>
+            <div style="font-size:1.08rem;line-height:1.7;max-width:420px;margin:0 auto 0 auto;">
+                <div><span style="font-size:1.2em;">🚨</span> <strong>For life-threatening emergencies, call 911</strong></div>
+                <div style="margin-left:1.2em;">9-1-1 — Serious medical problem, fire, life-threatening situation or crime in progress. Be aware of your location.</div>
+                <div style="margin-left:1.2em;">9-1-1 (text) — Only text 9-1-1 if you are unable to make a voice call.</div>
+                <br>
+                <div><span style="font-size:1.2em;">📞</span> <strong>For non-life-threatening emergencies, call (808) 935-3311</strong></div>
+                <div style="margin-left:1.2em;">Non-emergency calls address situations that require assistance but don't pose an immediate danger to life or property:</div>
+                <div style="margin-left:2.2em;">• Non-injury and non-blocking vehicle accidents</div>
+                <div style="margin-left:2.2em;">• Nuisance complaints (i.e. noise, parking, etc.)</div>
+                <div style="margin-left:2.2em;">• Non-dangerous animal control issues</div>
+                <br>
+                <div><span style="font-size:1.2em;">🏢</span> <strong>Hawaiʻi Emergency Management Agency (HIEMA)</strong></div>
+                <div style="margin-left:1.2em;">The Hawaiʻi Emergency Management Agency (HIEMA) plans for and responds to both natural and human-caused emergencies. These include emergencies resulting from all hazards, from tsunamis, wildfires, and hurricanes to incidents involving hazardous materials or nuclear power.</div>
+                <div style="margin-left:1.2em;">Email: <a href="mailto:HawaiiEMA@hawaii.gov" style="color:#007cba;text-decoration:underline;">HawaiiEMA@hawaii.gov</a></div>
+                <div style="margin-left:1.2em;">Telephone: <a href="tel:8087334300" style="color:#007cba;text-decoration:underline;">(808) 733-4300</a></div>
+                <div style="margin-left:1.2em;">Twitter: <a href="https://twitter.com/Hawaii_EMA" style="color:#007cba;text-decoration:underline;">@Hawaii_EMA</a></div>
+            </div>
         </div>
     </div>
     <div id="modal" class="modal" onclick="if(event.target===this)closeModal()">
