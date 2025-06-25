@@ -457,7 +457,7 @@
         <div class="nav-tabs">
             <button class="nav-tab active" onclick="showTab('itinerary')">📅 Schedule</button>
             <button class="nav-tab" onclick="showTab('dining')">🍽️ Dining</button>
-            <button class="nav-tab" onclick="showTab('maps')">🗺️ Maps</button>
+            <button class="nav-tab" onclick="showTab('carry')">🧳 What to Carry</button>
             <button class="nav-tab" onclick="showTab('info')">ℹ️ Info</button>
             <button class="nav-tab" onclick="showTab('contacts')">📞 Contacts</button>
         </div>
@@ -492,9 +492,9 @@
                         <div class="image-counter">2 photos - Click to view larger</div>
                     </div>
                     <div class="activity">
-                        <div class="activity-time">8:00 PM</div>
+                        <div class="activity-time">Evening</div>
                         <div class="activity-title">
-                            Dinner at ULU Ocean Grill (Four Seasons)
+                            Dinner 8 PM at ULU Ocean Grill (Four Seasons)
                             <button class="info-btn" onclick="showInfoModal('ULU Ocean Grill (Four Seasons)', `Fine dining with oceanfront views and fresh island cuisine.<br><br><strong>Address:</strong> <a href='https://maps.apple.com/?address=72-100%20Ka%27upulehu%20Dr,%20Kailua-Kona,%20HI%2096740' style='color:#007cba;text-decoration:underline;'>72-100 Ka'upulehu Dr, Kailua-Kona, HI 96740</a><br><strong>Reservation:</strong> July 3, 2025 at 8:00 PM.<br><br><a href='https://www.fourseasons.com/hualalai/dining/menus/ulu_dinner/' style='display:inline-block;margin:10px 0 0 0;padding:8px 22px;background:#fff;border:2px solid #6c47a3;color:#6c47a3;border-radius:8px;font-weight:600;text-decoration:none;box-shadow:0 1px 4px rgba(0,0,0,0.07);transition:background 0.2s;'>View Dinner Menu</a>`, 'https://www.fourseasons.com/alt/img-opt/~65.3402.0,0000-158,9300-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/KON/KON_3020_original.jpg', 'https://www.fourseasons.com/hualalai/dining/restaurants/ulu/', 'Award-winning oceanfront dining at the Four Seasons Resort Hualalai. Fresh seafood, local ingredients, and sunset views.')">Details</button>
                         </div>
                         <div class="activity-desc">Fine dining with oceanfront views and fresh island cuisine</div>
@@ -518,6 +518,11 @@
                             <button class="info-btn" onclick="showInfoModal('Kailua Village Independence Day Parade & Fireworks', `Join the cherished 4th of July Kailua Village Independence Day Parade and Fireworks Extravaganza Celebration in Historic Kailua Village!<br><br><strong>Location:</strong> <a href='https://maps.apple.com/?address=75-5737%20Kuakini%20Hwy,%20Kailua-Kona,%20HI%2096740' style='color:#007cba;text-decoration:underline;'>75-5737 Kuakini Hwy, Kailua-Kona, HI 96740</a> (Historic Kailua Village)<br><strong>Parade Start:</strong> 6:00 PM<br><strong>Fireworks Show:</strong> 8:00 PM<br><br>This annual tradition draws thousands of residents and visitors to the picturesque Historic Kailua Village and celebrates freedom, island style. Decorate your float, dress in red, white, and blue, and help us celebrate Independence Day Island Style!<br><br>More info: <a href='https://www.kona-kohala.com/news/details/2025-kailua-village-independence-day-parade-fireworks-extravaganza' style='color:#007cba;text-decoration:underline;'>Official Event Page</a>`, null, 'https://www.kona-kohala.com/news/details/2025-kailua-village-independence-day-parade-fireworks-extravaganza', 'Annual parade and fireworks in Historic Kailua Village. Parade at 6:00 PM, fireworks at 8:00 PM. All are welcome!')">Event Details</button>
                         </div>
                         <div class="activity-desc">Watch the Independence Day parade and spectacular fireworks display</div>
+                        <div class="image-gallery">
+                            <img src="https://chambermaster.blob.core.windows.net/userfiles/UserFiles/chambers/396/Image/2023_2B_Deleted/KailuaKonaParade24.jpg" alt="Kailua Kona Parade 2024" class="gallery-image" onclick="showImageModal(this.src, 'Kailua Kona Parade 2024')">
+                            <img src="https://chambermaster.blob.core.windows.net/userfiles/UserFiles/chambers/396/Image/2023_2B_Deleted/KailuaKonaJulyFireworks24.jpg" alt="Kailua Kona July Fireworks 2024" class="gallery-image" onclick="showImageModal(this.src, 'Kailua Kona July Fireworks 2024')">
+                        </div>
+                        <div class="image-counter">2 photos - Click to view larger</div>
                     </div>
                 </div>
             </div>
@@ -557,28 +562,59 @@
                 </div>
                 <div class="day-content">
                     <div class="activity">
-                        <div class="activity-time">Full Day</div>
+                        <div class="activity-time">Morning</div>
                         <div class="activity-title">
                             Hawaii Volcanoes National Park
-                            <button class="info-btn">Park Guide</button>
+                            <button class="info-btn" onclick="showInfoModal('Hawaii Volcanoes National Park & Rainbow Falls Tour', `
+                                <strong>Tour Highlights:</strong><br>
+                                • Explore Hawaii Volcanoes National Park<br>
+                                • See Kilauea volcano, steam vents, and Thurston Lava Tube<br>
+                                • Visit Rainbow Falls and a black sand beach<br>
+                                • Stop at the Volcano Visitor Center<br>
+                                <br>
+                                <strong>What You'll Experience:</strong><br>
+                                • Walk through lush rainforest and volcanic landscapes<br>
+                                • Learn about the geology and history of the Big Island<br>
+                                • See unique flora and fauna<br>
+                                <br>
+                                <strong>Duration:</strong> Approx. 6 hours<br>
+                                <strong>Accessibility:</strong> Moderate walking, not wheelchair accessible<br>
+                                <br>
+                                <a href='https://www.viator.com/tours/Big-Island-of-Hawaii/Hilo-Shore-Excursion-Exclusive-Volcanoes-National-Park-and-Rainbow-Falls/d669-22796P3' style='color:#007cba;text-decoration:underline;'>View Official Tour Page</a>
+                            `, 'https://dynamic-media.tacdn.com/media/photo-o/2e/d1/d4/74/caption.jpg?w=1400&h=1000&s=1', 'https://www.nps.gov/havo/index.htm', 'Official National Park Service site for Hawaii Volcanoes National Park.')">Park Guide</button>
                         </div>
-                        <div class="activity-desc">Explore steam vents, lava tubes, and Kilauea crater</div>
+                        <div class="activity-desc">Sample a cross-section of outdoor sights on the Big Island during this shore excursion exploring Volcanoes National Park, waterfall, black sand beach and more.</div>
+                        <div class="image-gallery">
+                            <img src="https://dynamic-media.tacdn.com/media/photo-o/2e/d1/d4/74/caption.jpg?w=1400&h=1000&s=1" alt="Hawaii Volcanoes National Park 1" class="gallery-image" onclick="showImageModal(this.src, 'Hawaii Volcanoes National Park 1')">
+                            <img src="https://dynamic-media.tacdn.com/media/photo-o/2e/d1/cb/fb/caption.jpg?w=1400&h=1000&s=1" alt="Hawaii Volcanoes National Park 2" class="gallery-image" onclick="showImageModal(this.src, 'Hawaii Volcanoes National Park 2')">
+                        </div>
+                        <div class="image-counter">2 photos - Click to view larger</div>
                     </div>
                     <div class="activity">
-                        <div class="activity-time">Afternoon</div>
+                        <div class="activity-time">Late Afternoon</div>
                         <div class="activity-title">
                             Magic Sands Beach Park
-                            <button class="info-btn">Beach Info</button>
+                            <button class="info-btn" onclick="showInfoModal('Magic Sands Beach (Laaloa Beach Park)', `<strong>Description:</strong><br/>Magic Sands Beach (La'aloa Bay Beach Park) is one of the best-known beaches along Alii Drive, famous for its &quot;disappearing sands&quot; that can vanish and reappear with the tides. It's a popular spot for swimming, bodyboarding, and sunbathing.<br/><br/><strong>Address:</strong> <a href='https://maps.apple.com/?address=77-6474%20Ali%CA%BBi%20Dr,%20Kailua-Kona,%20HI%2096740' style='color:#007cba;text-decoration:underline;'>77-6474 Ali'i Dr, Kailua-Kona, HI 96740</a><br/><strong>Activities:</strong> Swimming, Snorkeling, Bodyboarding, Sunbathing, Volleyball, Scuba Diving<br/><strong>Amenities:</strong> Lifeguards (daily), restrooms, showers, drinking water, picnic tables, sand volleyball court, restaurant (Magics Beach Grill)<br/><strong>Parking:</strong> Free parking in lots and along Ali'i Drive. Park hours: 7am–8pm.<br/><strong>Safety:</strong> Waves can be strong and the sand can disappear, exposing lava rocks. Lifeguards are present, but use caution—this beach is known for shorebreak injuries.<br/><br/><a href='https://www.hawaiibeaches.com/beach/magic-sands-beach-laaloa-beach-park/' style='color:#007cba;text-decoration:underline;'>View Official Beach Page</a>`, 'https://www.hawaiibeaches.com/wp-content/uploads/sites/3/2022/07/Magic-Sands-Laaloa-Beach-Park-BI-22-1-bds-9-Large-1024x755.jpg', 'https://www.hawaiibeaches.com/beach/magic-sands-beach-laaloa-beach-park/', 'Official page for Magic Sands Beach (Laaloa Beach Park)')">Beach Info</button>
                         </div>
                         <div class="activity-desc">Famous disappearing sand beach perfect for swimming</div>
+                        <div class="image-gallery">
+                            <img src="https://www.hawaiibeaches.com/wp-content/uploads/sites/3/2022/07/Magic-Sands-Laaloa-Beach-Park-BI-22-1-bds-9-Large-1024x755.jpg" alt="Magic Sands Beach Park 1" class="gallery-image" onclick="showImageModal(this.src, 'Magic Sands Beach Park 1')">
+                            <img src="https://www.hawaiibeaches.com/wp-content/uploads/sites/3/2022/07/Magic-Sands-Laaloa-Beach-Park-BI-22-1-bds-16-Large-1024x715.jpg" alt="Magic Sands Beach Park 2" class="gallery-image" onclick="showImageModal(this.src, 'Magic Sands Beach Park 2')">
+                        </div>
+                        <div class="image-counter">2 photos - Click to view larger</div>
                     </div>
                     <div class="activity">
-                        <div class="activity-time">Dinner</div>
+                        <div class="activity-time">Evening</div>
                         <div class="activity-title">
-                            Lava Lava Beach Club
-                            <button class="info-btn">Restaurant Info</button>
+                            Dinner at Lava Lava Beach Club
+                            <button class="info-btn" onclick="showInfoModal('Lava Lava Beach Club', `<strong>Description:</strong><br/>Lava Lava Beach Club is a premier beachfront restaurant at Waikoloa, offering relaxed island cuisine in an open-air setting with seats right on the sand. Enjoy stunning sunsets, swaying coconut trees, and tropical trade winds.<br/><br/><strong>Hours:</strong> 11:30am – 9:00pm daily<br/><strong>Seating:</strong> First come, first served. Check in with the host on arrival. If there is a wait, leave your cell number and stroll the beach—text notification when your table is ready.<br/><strong>Address:</strong> <a href='https://maps.apple.com/?address=69-1081%20Ku%27uali%27i%20Pl,%20Waikoloa%20Village,%20HI%2096778' style='color:#007cba;text-decoration:underline;'>69-1081 Ku'uali'i Pl, Waikoloa Village, HI 96778</a><br/><strong>Menu Highlights:</strong> Fresh fish tacos, burgers, steak, Hawaiian seafood, creative chef specials, and tropical drinks.<br/><strong>Reservations:</strong> No reservations. In-person waitlist only.<br/><strong>Delivery:</strong> In-service dining only. No delivery services.<br/><br/><a href='https://lavalavabeachclub.com/bigisland/' style='color:#007cba;text-decoration:underline;'>View Official Website</a>`, 'https://lavalavabeachclub.com/bigisland/wp-content/uploads/2016/03/Beach-Front-Dining-LLBC-Slider.png', 'https://lavalavabeachclub.com/bigisland/', 'Official website for Lava Lava Beach Club')">Restaurant Info</button>
                         </div>
                         <div class="activity-desc">Beachfront dining with toes in the sand</div>
+                        <div class="image-gallery">
+                            <img src="https://lavalavabeachclub.com/bigisland/wp-content/uploads/2016/03/Beach-Front-Dining-LLBC-Slider.png" alt="Lava Lava Beach Club 1" class="gallery-image" onclick="showImageModal(this.src, 'Lava Lava Beach Club 1')">
+                            <img src="https://lavalavabeachclub.com/bigisland/wp-content/uploads/2019/10/Hook-lin-sinker-llbc-Slider.png" alt="Lava Lava Beach Club 2" class="gallery-image" onclick="showImageModal(this.src, 'Lava Lava Beach Club 2')">
+                        </div>
+                        <div class="image-counter">2 photos - Click to view larger</div>
                     </div>
                 </div>
             </div>
@@ -591,7 +627,7 @@
                     <div class="activity">
                         <div class="activity-time">Morning</div>
                         <div class="activity-title">
-                            Hula Daddy Coffee Tour
+                            Hula Daddy Coffee Plantation Tour
                             <button class="info-btn" onclick="showInfoModal('Hula Daddy Coffee Plantation Tour', `Monday, July 7, 2025 at 11:15 AM – 12:15 PM<br><br>Hula Daddy Coffee offers a 60-minute tour of their plantation and roasting room.<br><br><strong>Here's what you can expect:</strong><br><ul style='text-align:left;margin:10px 0 10px 18px;'><li><strong>Visit the orchard:</strong> Learn about how the coffee trees are cared for, the harvest cycle, and the different stages of the coffee berries. You'll also learn about the natural coffee bean drying and sorting processes.</li><li><strong>Explore the roasting room:</strong> Discover the coffee roasting equipment and process, including different roasts, temperatures, and caffeine levels.</li><li><strong>Coffee Tasting:</strong> Enjoy a tasting of their award-winning Kona coffee.</li><li><strong>Learn about Kona Coffee:</strong> Gain insights into the growing, processing, and roasting of 100% Kona coffee.</li><li><strong>Talk to the experts:</strong> You'll have the opportunity to speak with the roaster and the owners.</li></ul>`, 'https://huladaddy.com/cdn/shop/files/Hula_Daddy_Hero_1920_x_1080-002.jpg?v=1693265464&width=1800', 'https://huladaddy.com/', 'Official Hula Daddy Coffee Plantation website.')">Tour Info</button>
                         </div>
                         <div class="activity-desc"><strong>Morning 11:15 am to 12:15 pm</strong> • Experience award-winning Kona coffee at Hula Daddy Coffee farm</div>
@@ -602,7 +638,7 @@
                         <div class="image-counter">2 photos - Click to view larger</div>
                     </div>
                     <div class="activity">
-                        <div class="activity-time">All Day</div>
+                        <div class="activity-time">Afternoon</div>
                         <div class="activity-title">
                             Beach Day
                             <button class="info-btn">Beach Options</button>
@@ -661,17 +697,100 @@
                 </div>
             </div>
         </div>
-        <div id="maps" class="tab-content">
-            <p>Interactive maps and key locations coming soon!</p>
+        <div id="carry" class="tab-content">
+            <h3 style="margin-bottom:12px;">What to Carry for Your Hawaii Trip</h3>
+            <ul style="font-size:1.08rem;line-height:1.8;margin-left:0;padding-left:0;list-style:none;max-width:420px;">
+                <li>🧴 <strong>Sunscreen</strong> (reef-safe, high SPF)</li>
+                <li>💧 <strong>Reusable water bottle</strong></li>
+                <li>🧥 <strong>Light rain jacket</strong> (for passing showers)</li>
+                <li>🧢 <strong>Hat</strong> or cap for sun protection</li>
+                <li>🕶️ <strong>Sunglasses</strong></li>
+                <li>🩱 <strong>Swimwear</strong> (multiple sets recommended)</li>
+                <li>🩴 <strong>Sandals/flip-flops</strong></li>
+                <li>🥾 <strong>Hiking shoes</strong> (for volcanoes, trails)</li>
+                <li>🦟 <strong>Insect repellent</strong></li>
+                <li>💊 <strong>Medications</strong> and basic first aid</li>
+                <li>👕 <strong>Light layers</strong> (for cool evenings or A/C)</li>
+                <li>📱 <strong>Waterproof phone pouch</strong></li>
+                <li>🪪 <strong>Copies of important documents</strong> (ID, insurance, reservations)</li>
+                <li>🧻 <strong>Travel tissues/wipes</strong></li>
+                <li>🪥 <strong>Personal toiletries</strong></li>
+                <li>🧂 <strong>Snacks</strong> for excursions</li>
+            </ul>
+            <div style="font-size:0.98rem;color:#666;margin-top:10px;">Tip: Check the weather each morning and adjust your day bag as needed. Hawaii sun is strong—stay hydrated and reapply sunscreen often!</div>
         </div>
         <div id="info" class="tab-content">
-            <h3>Useful Links</h3>
-            <ul style="margin: 16px 0 24px 18px; font-size: 1.1rem;">
-                <li>
-                    <a href="https://www.aquaaston.com/hotels/aston-kona-by-the-sea/gallery" style='color:#007cba;text-decoration:underline;'>Aston Kona by the Sea Official Photo Gallery</a>
-                </li>
-            </ul>
-            <p>Trip info, tips, and emergency contacts coming soon!</p>
+            <div style="display:flex;gap:18px;justify-content:center;margin:24px 0 18px 0;">
+                <button class="info-btn" style="font-size:1.1rem;padding:14px 22px;display:flex;align-items:center;gap:10px;" onclick="showModal(`
+                    <span class='modal-close' onclick='closeModal()'>&times;</span>
+                    <h2 style='margin-bottom:10px;'>24-Hour Pharmacies</h2>
+                    <ul style='font-size:1.08rem;line-height:1.8;margin-left:0;padding-left:0;list-style:none;max-width:420px;'>
+                        <li>🏥 <strong>Longs Drugs (CVS) – Kailua-Kona</strong><br/>
+                            75-5595 Palani Rd, Kailua-Kona, HI 96740<br/>
+                            Phone: <a href='tel:8083290591' style='color:#007cba;text-decoration:underline;'>(808) 329-0591</a><br/>
+                            <a href='https://goo.gl/maps/4Qn1Qw6Qw6Q2' style='color:#007cba;text-decoration:underline;'>Google Maps</a>
+                        </li>
+                        <li>🏥 <strong>Longs Drugs (CVS) – Hilo</strong><br/>
+                            555 Kilauea Ave, Hilo, HI 96720<br/>
+                            Phone: <a href='tel:8089353751' style='color:#007cba;text-decoration:underline;'>(808) 935-3751</a><br/>
+                            <a href='https://goo.gl/maps/2Qn1Qw6Qw6Q2' style='color:#007cba;text-decoration:underline;'>Google Maps</a>
+                        </li>
+                    </ul>
+                    <div style='font-size:0.98rem;color:#666;margin-top:10px;'>Note: Pharmacy counters may have reduced hours. Always call ahead for pharmacy services. Hours may change on holidays or due to local events.</div>
+                `)">💊 Pharmacy</button>
+                <button class="info-btn" style="font-size:1.1rem;padding:14px 22px;display:flex;align-items:center;gap:10px;" onclick="showModal(`
+                    <span class='modal-close' onclick='closeModal()'>&times;</span>
+                    <h2 style='margin-bottom:10px;'>24-Hour Grocery Stores</h2>
+                    <ul style='font-size:1.08rem;line-height:1.8;margin-left:0;padding-left:0;list-style:none;max-width:420px;'>
+                        <li>🛒 <strong>Safeway – Kailua-Kona</strong><br/>
+                            75-1027 Henry St, Kailua-Kona, HI 96740<br/>
+                            Phone: <a href='tel:8083318250' style='color:#007cba;text-decoration:underline;'>(808) 331-8250</a><br/>
+                            <a href='https://goo.gl/maps/3Qn1Qw6Qw6Q2' style='color:#007cba;text-decoration:underline;'>Google Maps</a>
+                        </li>
+                        <li>🛒 <strong>Safeway – Hilo</strong><br/>
+                            381 E Makaala St, Hilo, HI 96720<br/>
+                            Phone: <a href='tel:8083393790' style='color:#007cba;text-decoration:underline;'>(808) 339-3790</a><br/>
+                            <a href='https://goo.gl/maps/1Qn1Qw6Qw6Q2' style='color:#007cba;text-decoration:underline;'>Google Maps</a>
+                        </li>
+                    </ul>
+                `)">🛒 Groceries</button>
+                <button class="info-btn" style="font-size:1.1rem;padding:14px 22px;display:flex;align-items:center;gap:10px;" onclick="showModal(`
+                    <span class='modal-close' onclick='closeModal()'>&times;</span>
+                    <h2 style='margin-bottom:10px;'>Wine & Spirits Stores</h2>
+                    <ul style='font-size:1.08rem;line-height:1.8;margin-left:0;padding-left:0;list-style:none;max-width:420px;'>
+                        <li>🍷 <strong>Kona Wine Market</strong><br/>
+                            73-5613 Olowalu St #1, Kailua-Kona, HI 96740<br/>
+                            Phone: <a href='tel:8083299400' style='color:#007cba;text-decoration:underline;'>(808) 329-9400</a><br/>
+                            <a href='https://goo.gl/maps/6Qn1Qw6Qw6Q2' style='color:#007cba;text-decoration:underline;'>Google Maps</a>
+                        </li>
+                        <li>🍷 <strong>Westside Wines & Spirits</strong><br/>
+                            75-1027 Henry St, Kailua-Kona, HI 96740<br/>
+                            Phone: <a href='tel:8083297999' style='color:#007cba;text-decoration:underline;'>(808) 329-7999</a><br/>
+                            <a href='https://goo.gl/maps/7Qn1Qw6Qw6Q2' style='color:#007cba;text-decoration:underline;'>Google Maps</a>
+                        </li>
+                        <li>🍷 <strong>Safeway (Kailua-Kona & Hilo)</strong><br/>
+                            Full spirits selection, open 24 hours<br/>
+                            <a href='https://goo.gl/maps/3Qn1Qw6Qw6Q2' style='color:#007cba;text-decoration:underline;'>Kailua-Kona</a> | <a href='https://goo.gl/maps/1Qn1Qw6Qw6Q2' style='color:#007cba;text-decoration:underline;'>Hilo</a>
+                        </li>
+                        <li>🍷 <strong>Costco (Kailua-Kona)</strong><br/>
+                            73-5600 Maiau St, Kailua-Kona, HI 96740<br/>
+                            Phone: <a href='tel:8083314800' style='color:#007cba;text-decoration:underline;'>(808) 331-4800</a><br/>
+                            <a href='https://goo.gl/maps/5Qn1Qw6Qw6Q2' style='color:#007cba;text-decoration:underline;'>Google Maps</a>
+                        </li>
+                        <li>🍷 <strong>Kadota Liquor (Hilo)</strong><br/>
+                            194 Kilauea Ave, Hilo, HI 96720<br/>
+                            Phone: <a href='tel:8089353751' style='color:#007cba;text-decoration:underline;'>(808) 935-3751</a><br/>
+                            <a href='https://goo.gl/maps/8Qn1Qw6Qw6Q2' style='color:#007cba;text-decoration:underline;'>Google Maps</a>
+                        </li>
+                        <li>🍷 <strong>Hilo Bottle Shop</strong><br/>
+                            962 Kilauea Ave, Hilo, HI 96720<br/>
+                            Phone: <a href='tel:8089358446' style='color:#007cba;text-decoration:underline;'>(808) 935-8446</a><br/>
+                            <a href='https://goo.gl/maps/9Qn1Qw6Qw6Q2' style='color:#007cba;text-decoration:underline;'>Google Maps</a>
+                        </li>
+                    </ul>
+                    <div style='font-size:0.98rem;color:#666;margin-top:10px;'>Note: Hawaii law prohibits alcohol sales between midnight and 6am. Always bring a valid photo ID for spirits purchases.</div>
+                `)">🍷 Wine & Spirits</button>
+            </div>
         </div>
         <div id="contacts" class="tab-content">
             <div style="font-size:1.08rem;line-height:1.7;max-width:420px;margin:0 auto 0 auto;">
