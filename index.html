@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawaii Big Island Trip - July 2025</title>
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiSGF3YWlpIEJpZyBJc2xhbmQgVHJpcCIsInNob3J0X25hbWUiOiJIYXdhaWkgVHJpcCIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwic3RhcnRfdXJsIjoiLyIsInRoZW1lX2NvbG9yIjoiIzAwN2NiYSIsImJhY2tncm91bmRfY29sb3IiOiIjZmZmZmZmIiwiaWNvbnMiOlt7InNyYyI6ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjNhV1IwYUQwaU1qUXdJaUJvWldsbmFIUTlJakl6TmlJZ2RtbGxkMEp2ZUQwaU1DQXdJakkwTUNBeU16WWlJSGh0Ykc1elBTSm9kSFJ3T2k4dmQzZDNMbmN6TG05eVp5OHlNREF3TDNOMlp5SStQR05wY21Oc1pTQmplRDBpTVRJd0lpQmplVDBpTVRFNElpQnlQU0l4TURBaUlHWnBiR3c5SWlNd01EZGpZbUVpTHo0OGRHVjRkQ0I0UFNJeE1qQWlJSGs5SWpFME9DSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm1sc2JEMGlJM2RvYVhSbElpQm1iMjUwTFhOcGVtVTlJakV5SWo1SVBDOTBaWGgwUGp3dmMzWm5QZz09IiwidHlwZSI6ImltYWdlL3N2Zyt4bWwiLCJzaXplcyI6IjI0MHgyNDAifV19">
+    <meta name="theme-color" content="#007cba">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        .container {
+            max-width: 420px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #007cba, #00a8e8);
+            color: white;
+            padding: 24px 20px 16px 20px;
+            text-align: center;
+            border-radius: 0 0 24px 24px;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 4px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .header p {
+            opacity: 0.95;
+            font-size: 1.1rem;
+        }
+        .install-prompt {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 18px 20px 12px 20px;
+            margin: 20px;
+            border-radius: 18px;
+            text-align: center;
+        }
+        .install-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 10px 24px;
+            border-radius: 8px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .nav-tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .nav-tab {
+            flex: 1;
+            padding: 12px 8px;
+            text-align: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .nav-tab.active {
+            color: #007cba;
+            background: white;
+        }
+        .nav-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #007cba;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            min-height: 60vh;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .flight-info {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+        }
+        .flight-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .flight-time {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .weather-widget {
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .weather-widget:hover {
+            transform: translateY(-2px);
+        }
+        .weather-temp {
+            font-size: 2.2rem;
+            font-weight: 300;
+            margin-bottom: 5px;
+        }
+        .weather-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+        .day-card {
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+            overflow: hidden;
+        }
+        .day-header {
+            background: #007cba;
+            color: white;
+            padding: 14px 20px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+        .weather-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .weather-badge:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .day-content {
+            padding: 20px;
+        }
+        .activity {
+            margin-bottom: 28px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .activity:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .activity-time {
+            color: #007cba;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+        }
+        .activity-title {
+            font-weight: 700;
+            margin: 5px 0 2px 0;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .activity-desc {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .info-btn {
+            background: #007cba;
+            color: white;
+            border: none;
+            padding: 4px 14px;
+            border-radius: 18px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-left: 10px;
+        }
+        .info-btn:hover {
+            background: #005a8a;
+        }
+        .image-gallery {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding: 10px 0 2px 0;
+            margin: 10px 0 0 0;
+        }
+        .gallery-image {
+            min-width: 160px;
+            height: 110px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 2px solid #f0f0f0;
+        }
+        .gallery-image:hover {
+            transform: scale(1.05);
+            border-color: #007cba;
+        }
+        .image-counter {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 8vh auto;
+            padding: 24px 18px 18px 18px;
+            border-radius: 18px;
+            width: 95vw;
+            max-width: 420px;
+            position: relative;
+            text-align: center;
+        }
+        .modal-close {
+            position: absolute;
+            right: 18px;
+            top: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #aaa;
+            cursor: pointer;
+        }
+        .modal-close:hover {
+            color: #007cba;
+        }
+        .modal-img {
+            width: 100%;
+            max-height: 260px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+        @media (max-width: 480px) {
+            .nav-tab {
+                font-size: 0.95rem;
+                padding: 10px 6px;
+            }
+            .weather-details {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+    <script>
+        function showTab(tabName) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            const navTabs = document.querySelectorAll('.nav-tab');
+            navTabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+        function showModal(content) {
+            const modal = document.getElementById('modal');
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = content;
+            modal.style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+        function showImageModal(src, alt) {
+            showModal(`<span class='modal-close' onclick='closeModal()'>&times;</span><img src='${src}' alt='${alt}' class='modal-img'><div>${alt}</div>`);
+        }
+        function showInfoModal(title, details, imageUrl, websiteUrl, websiteDesc) {
+            showModal(`
+                <span class='modal-close' onclick='closeModal()'>&times;</span>
+                <h2 style="margin-bottom:10px;">${title}</h2>
+                ${imageUrl ? `<img src='${imageUrl}' alt='${title} preview' style='width:100%;max-height:160px;object-fit:cover;border-radius:12px;margin-bottom:14px;'>` : ''}
+                <div style='margin-bottom:18px;font-size:1.08rem;color:#444;'>${details}</div>
+                <div style="background:#f6f8fa;border-radius:12px;padding:16px 10px 12px 10px;margin:0 auto 0 auto;max-width:320px;box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+                    <div style="font-weight:600;font-size:1.07rem;margin-bottom:6px;">Official Website</div>
+                    <div style="color:#555;font-size:0.98rem;margin-bottom:10px;">${websiteDesc || ''}</div>
+                    <a href="${websiteUrl}" style="display:inline-block;padding:8px 22px;background:#6c47a3;color:white;border-radius:8px;font-weight:600;text-decoration:none;box-shadow:0 1px 4px rgba(0,0,0,0.07);transition:background 0.2s;">Visit Website</a>
+                </div>
+            `);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌺 Hawaii Big Island</h1>
+            <p>Family Adventure • July 3-9, 2025</p>
+        </div>
+        <div class="install-prompt">
+            <div>📱 Add this app to your home screen for easy access!</div>
+            <button class="install-btn" onclick="alert('On iPhone: Share > Add to Home Screen. On Android: Menu > Add to Home Screen.')">How to Install</button>
+        </div>
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('itinerary')">📅 Schedule</button>
+            <button class="nav-tab" onclick="showTab('dining')">🍽️ Dining</button>
+            <button class="nav-tab" onclick="showTab('maps')">🗺️ Maps</button>
+            <button class="nav-tab" onclick="showTab('info')">ℹ️ Info</button>
+            <button class="nav-tab" onclick="showTab('contacts')">📞 Contacts</button>
+        </div>
+        <div id="itinerary" class="tab-content active">
+            <div class="flight-info">
+                <div class="flight-details">
+                    <div>
+                        <div class="flight-time">July 3 - Departure</div>
+                        <div>SLC → Kona (KOA)</div>
+                    </div>
+                    <div>✈️</div>
+                </div>
+                <div class="flight-details">
+                    <div>
+                        <div class="flight-time">July 9 - Return</div>
+                        <div>Kona (KOA) → SLC</div>
+                    </div>
+                    <div>🏠</div>
+                </div>
+            </div>
+            <div class="weather-widget">
+                <div class="weather-temp">82°F</div>
+                <div>Partly Cloudy • Perfect for exploring!</div>
+                <div class="weather-details">
+                    <div>🌡️ 75°-85°F</div>
+                    <div>🌧️ 20% Rain</div>
+                    <div>💨 12 mph</div>
+                </div>
+                <div style="font-size: 12px; margin-top: 10px; opacity: 0.8;">Click for 7-day forecast</div>
+            </div>
+            <div class="day-card">
+                <div class="day-header">
+                    <div>July 3 - Arrival Day</div>
+                    <div class="weather-badge">🌤️ 81°F</div>
+                </div>
+                <div class="day-content">
+                    <div class="activity">
+                        <div class="activity-time">Afternoon</div>
+                        <div class="activity-title">
+                            Check-in: Aston Kona by the Sea
+                            <button class="info-btn" onclick="showInfoModal('Aston Kona by the Sea', `Oceanfront resort with pool, beach access, and beautiful sunset views.<br><br><strong>Address:</strong> <a href='https://maps.apple.com/?address=75-6106%20Alii%20Dr,%20Kailua-Kona,%20HI%2096740' style='color:#007cba;text-decoration:underline;'>75-6106 Alii Dr, Kailua-Kona, HI 96740</a><br><strong>Check-in:</strong> 4:00 PM.`, 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80', 'https://www.aquaaston.com/hotels/aston-kona-by-the-sea?gad_source=1&gad_campaignid=1501507111&gbraid=0AAAAAD1rau1oZY3MetYunAqtYCNMqn08j&gclid=CjwKCAjwmenCBhA4EiwAtVjzmgM98FX5jeMLPVTgI3RN3eRK_zSSxAJ9YaJX22tlvfarBsmrs_GB0hoC7gMQAvD_BwE', 'Oceanfront suites, saltwater pool, and sunset views. Book direct for best rates.')">Info</button>
+                        </div>
+                        <div class="activity-desc">Get settled and enjoy the oceanfront location</div>
+                        <div class="image-gallery">
+                            <img src="https://www.aquaaston.com/files/live/sites/aah/files/properties/KBS/aston-kona-by-the-sea-driveway-1-1440x960.jpg?t=ri-1440.webp" alt="Aston Kona by the Sea Driveway" class="gallery-image" onclick="showImageModal(this.src, 'Aston Kona by the Sea Driveway')">
+                            <img src="https://www.aquaaston.com/files/live/sites/aah/files/properties/KBS/drone/KBS_Pool-SL-D_767x520.jpg?t=ri-767.webp" alt="Aston Kona by the Sea Pool" class="gallery-image" onclick="showImageModal(this.src, 'Aston Kona by the Sea Pool')">
+                        </div>
+                        <div class="image-counter">2 photos - Click to view larger</div>
+                    </div>
+                    <div class="activity">
+                        <div class="activity-time">8:00 PM</div>
+                        <div class="activity-title">
+                            Dinner at ULU Ocean Grill (Four Seasons)
+                            <button class="info-btn" onclick="showInfoModal('ULU Ocean Grill (Four Seasons)', `Fine dining with oceanfront views and fresh island cuisine.<br><br><strong>Address:</strong> <a href='https://maps.apple.com/?address=72-100%20Ka%27upulehu%20Dr,%20Kailua-Kona,%20HI%2096740' style='color:#007cba;text-decoration:underline;'>72-100 Ka'upulehu Dr, Kailua-Kona, HI 96740</a><br><strong>Reservation:</strong> July 3, 2025 at 8:00 PM.<br><br><a href='https://www.fourseasons.com/hualalai/dining/menus/ulu_dinner/' style='display:inline-block;margin:10px 0 0 0;padding:8px 22px;background:#fff;border:2px solid #6c47a3;color:#6c47a3;border-radius:8px;font-weight:600;text-decoration:none;box-shadow:0 1px 4px rgba(0,0,0,0.07);transition:background 0.2s;'>View Dinner Menu</a>`, 'https://www.fourseasons.com/alt/img-opt/~65.3402.0,0000-158,9300-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/KON/KON_3020_original.jpg', 'https://www.fourseasons.com/hualalai/dining/restaurants/ulu/', 'Award-winning oceanfront dining at the Four Seasons Resort Hualalai. Fresh seafood, local ingredients, and sunset views.')">Details</button>
+                        </div>
+                        <div class="activity-desc">Fine dining with oceanfront views and fresh island cuisine</div>
+                        <div class="image-gallery" style="margin-bottom:10px;">
+                            <img src="https://www.fourseasons.com/alt/img-opt/~65.3402.0,0000-158,9300-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/KON/KON_3020_original.jpg" alt="ULU Grill (Four Seasons)" style="width:100%;max-height:180px;object-fit:cover;border-radius:18px;margin-bottom:14px;" onclick="showImageModal(this.src, 'ULU Grill (Four Seasons)')">
+                        </div>
+                        <div class="image-counter">1 photo - Click to view larger</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day-card">
+                <div class="day-header">
+                    <div>July 4 - Independence Day</div>
+                    <div class="weather-badge">☀️ 83°F</div>
+                </div>
+                <div class="day-content">
+                    <div class="activity">
+                        <div class="activity-time">Evening</div>
+                        <div class="activity-title">
+                            Kailua Village Independence Day Parade & Fireworks
+                            <button class="info-btn" onclick="showInfoModal('Kailua Village Independence Day Parade & Fireworks', `Join the cherished 4th of July Kailua Village Independence Day Parade and Fireworks Extravaganza Celebration in Historic Kailua Village!<br><br><strong>Location:</strong> <a href='https://maps.apple.com/?address=75-5737%20Kuakini%20Hwy,%20Kailua-Kona,%20HI%2096740' style='color:#007cba;text-decoration:underline;'>75-5737 Kuakini Hwy, Kailua-Kona, HI 96740</a> (Historic Kailua Village)<br><strong>Parade Start:</strong> 6:00 PM<br><strong>Fireworks Show:</strong> 8:00 PM<br><br>This annual tradition draws thousands of residents and visitors to the picturesque Historic Kailua Village and celebrates freedom, island style. Decorate your float, dress in red, white, and blue, and help us celebrate Independence Day Island Style!<br><br>More info: <a href='https://www.kona-kohala.com/news/details/2025-kailua-village-independence-day-parade-fireworks-extravaganza' style='color:#007cba;text-decoration:underline;'>Official Event Page</a>`, null, 'https://www.kona-kohala.com/news/details/2025-kailua-village-independence-day-parade-fireworks-extravaganza', 'Annual parade and fireworks in Historic Kailua Village. Parade at 6:00 PM, fireworks at 8:00 PM. All are welcome!')">Event Details</button>
+                        </div>
+                        <div class="activity-desc">Watch the Independence Day parade and spectacular fireworks display</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day-card">
+                <div class="day-header">
+                    <div>July 5 - Beach & Manta Rays</div>
+                    <div class="weather-badge">🌤️ 84°F</div>
+                </div>
+                <div class="day-content">
+                    <div class="activity">
+                        <div class="activity-time">All Day</div>
+                        <div class="activity-title">
+                            Beach Day
+                            <button class="info-btn">Best Beaches</button>
+                        </div>
+                        <div class="activity-desc">Relax at Hapuna Beach or explore local coves</div>
+                    </div>
+                    <div class="activity">
+                        <div class="activity-time">Night</div>
+                        <div class="activity-title">
+                            Manta Ray Night Snorkel
+                            <button class="info-btn" onclick="showInfoModal('Manta Ray Night Snorkel (Coral Reef Adventures)', `Experience the #1 tour in Kailua Kona! Float under the stars and watch gentle giant manta rays glide within inches of you.<br><br><strong>Departure:</strong><br>Meet at Honokohau Harbor<br>Arrive 15 minutes early<br><br><strong>Return:</strong><br>Return to Honokohau Harbor<br>Tour duration is 2 hours<br><br><strong>Restrictions:</strong><br>Ages 7-70<br>Must be able to swim 25 yards<br>No heart problems or medical conditions<br>No pregnancies<br>270 pound weight limit<br>Not wheelchair accessible<br><br>All snorkel gear and wetsuit provided. Small group experience (max 12 guests). 92% manta sighting rate—if you don't see mantas, you can rebook for free!`, null, 'https://www.coralreefsnorkeladventures.com/manta-ray-snorkel-kona/?gad_source=1&gad_campaignid=21430158171&gbraid=0AAAAADOzwkzUdMyl6TNM446xH14etRjN2&gclid=CjwKCAjwmenCBhA4EiwAtVjzmpzwP2LiBPI9vNJlUIfflWNgnC6_c5QVf8WGhj9ZNQqpZLWYm9RJ_BoCAc0QAvD_BwE', 'Top-rated manta ray night snorkel tour. Small groups, all gear provided, 92% manta sighting rate.')">Experience Info</button>
+                        </div>
+                        <div class="activity-desc">Unforgettable encounter with gentle giant manta rays</div>
+                    </div>
+                </div>
+                <div class="image-gallery">
+                    <img src="https://www.coralreefsnorkeladventures.com/wp-content/uploads/2022/02/ma-09.jpg-e1645044042824.webp" alt="Manta Ray Snorkel 1" class="gallery-image" onclick="showImageModal(this.src, 'Manta Ray Snorkel 1')">
+                    <img src="https://www.coralreefsnorkeladventures.com/wp-content/uploads/2022/02/ma10.jpg-2-e1645043882394.webp" alt="Manta Ray Snorkel 2" class="gallery-image" onclick="showImageModal(this.src, 'Manta Ray Snorkel 2')">
+                </div>
+                <div class="image-counter">2 photos - Click to view larger</div>
+            </div>
+            <div class="day-card">
+                <div class="day-header">
+                    <div>July 6 - Volcanoes & Magic Sands</div>
+                    <div class="weather-badge">⛅ 79°F</div>
+                </div>
+                <div class="day-content">
+                    <div class="activity">
+                        <div class="activity-time">Full Day</div>
+                        <div class="activity-title">
+                            Hawaii Volcanoes National Park
+                            <button class="info-btn">Park Guide</button>
+                        </div>
+                        <div class="activity-desc">Explore steam vents, lava tubes, and Kilauea crater</div>
+                    </div>
+                    <div class="activity">
+                        <div class="activity-time">Afternoon</div>
+                        <div class="activity-title">
+                            Magic Sands Beach Park
+                            <button class="info-btn">Beach Info</button>
+                        </div>
+                        <div class="activity-desc">Famous disappearing sand beach perfect for swimming</div>
+                    </div>
+                    <div class="activity">
+                        <div class="activity-time">Dinner</div>
+                        <div class="activity-title">
+                            Lava Lava Beach Club
+                            <button class="info-btn">Restaurant Info</button>
+                        </div>
+                        <div class="activity-desc">Beachfront dining with toes in the sand</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day-card">
+                <div class="day-header">
+                    <div>July 7 - Beach & Sunset Cruise</div>
+                    <div class="weather-badge">☀️ 85°F</div>
+                </div>
+                <div class="day-content">
+                    <div class="activity">
+                        <div class="activity-time">Morning</div>
+                        <div class="activity-title">
+                            Hula Daddy Coffee Tour
+                            <button class="info-btn" onclick="showInfoModal('Hula Daddy Coffee Plantation Tour', `Monday, July 7, 2025 at 11:15 AM – 12:15 PM<br><br>Hula Daddy Coffee offers a 60-minute tour of their plantation and roasting room.<br><br><strong>Here's what you can expect:</strong><br><ul style='text-align:left;margin:10px 0 10px 18px;'><li><strong>Visit the orchard:</strong> Learn about how the coffee trees are cared for, the harvest cycle, and the different stages of the coffee berries. You'll also learn about the natural coffee bean drying and sorting processes.</li><li><strong>Explore the roasting room:</strong> Discover the coffee roasting equipment and process, including different roasts, temperatures, and caffeine levels.</li><li><strong>Coffee Tasting:</strong> Enjoy a tasting of their award-winning Kona coffee.</li><li><strong>Learn about Kona Coffee:</strong> Gain insights into the growing, processing, and roasting of 100% Kona coffee.</li><li><strong>Talk to the experts:</strong> You'll have the opportunity to speak with the roaster and the owners.</li></ul>`, 'https://huladaddy.com/cdn/shop/files/Hula_Daddy_Hero_1920_x_1080-002.jpg?v=1693265464&width=1800', 'https://huladaddy.com/', 'Official Hula Daddy Coffee Plantation website.')">Tour Info</button>
+                        </div>
+                        <div class="activity-desc"><strong>Morning 11:15 am to 12:15 pm</strong> • Experience award-winning Kona coffee at Hula Daddy Coffee farm</div>
+                        <div class="image-gallery">
+                            <img src="https://huladaddy.com/cdn/shop/files/Hula_Daddy_Hero_1920_x_1080-002.jpg?v=1693265464&width=1800" alt="Hula Daddy Coffee Farm" class="gallery-image" onclick="showImageModal(this.src, 'Hula Daddy Coffee Farm')">
+                            <img src="https://huladaddy.com/cdn/shop/collections/Hula_Daddy_Gifts.png?v=1694476115&width=1380" alt="Hula Daddy Coffee Gifts" class="gallery-image" onclick="showImageModal(this.src, 'Hula Daddy Coffee Gifts')">
+                        </div>
+                        <div class="image-counter">2 photos - Click to view larger</div>
+                    </div>
+                    <div class="activity">
+                        <div class="activity-time">All Day</div>
+                        <div class="activity-title">
+                            Beach Day
+                            <button class="info-btn">Beach Options</button>
+                        </div>
+                        <div class="activity-desc">Another perfect day at the beach - maybe try snorkeling!</div>
+                    </div>
+                    <div class="activity">
+                        <div class="activity-time">Evening</div>
+                        <div class="activity-title">
+                            Sunset Dinner Cruise
+                            <button class="info-btn">Cruise Details</button>
+                        </div>
+                        <div class="activity-desc">Romantic dinner cruise with breathtaking Pacific sunset</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day-card">
+                <div class="day-header">
+                    <div>July 8 - Free Day</div>
+                    <div class="weather-badge">🌤️ 82°F</div>
+                </div>
+                <div class="day-content">
+                    <div class="activity">
+                        <div class="activity-time">Morning</div>
+                        <div class="activity-title">
+                            Free Time / Optional Activities
+                            <button class="info-btn">Ideas</button>
+                        </div>
+                        <div class="activity-desc">Spa day, shopping, or explore places you loved most</div>
+                    </div>
+                    <div class="activity">
+                        <div class="activity-time">Evening</div>
+                        <div class="activity-title">Farewell Dinner</div>
+                        <div class="activity-desc">Celebrate your amazing Hawaiian adventure</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dining" class="tab-content">
+            <div style="background:white;border-radius:16px;box-shadow:0 2px 10px rgba(0,0,0,0.07);padding:22px 18px 18px 18px;max-width:380px;margin:0 auto 24px auto;text-align:center;">
+                <div class="image-gallery" style="margin-bottom:10px;">
+                    <img src="https://www.fourseasons.com/alt/img-opt/~65.3402.0,0000-158,9300-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/KON/KON_3020_original.jpg" alt="ULU Grill (Four Seasons)" style="width:100%;max-height:180px;object-fit:cover;border-radius:18px;margin-bottom:14px;" onclick="showImageModal(this.src, 'ULU Grill (Four Seasons)')">
+                </div>
+                <div class="image-counter">1 photo - Click to view larger</div>
+                <h2 style="margin-bottom:10px;">ULU Ocean Grill (Four Seasons)</h2>
+                <div style="font-size:1.08rem;color:#444;margin-bottom:14px;">Fine dining with oceanfront views and fresh island cuisine.</div>
+                <div style="text-align:left;font-size:1.01rem;margin-bottom:10px;">
+                    <strong>Address:</strong> <a href="https://maps.apple.com/?address=72-100%20Ka%27upulehu%20Dr,%20Kailua-Kona,%20HI%2096740" style='color:#007cba;text-decoration:underline;'>72-100 Ka'upulehu Dr, Kailua-Kona, HI 96740</a><br>
+                    <strong>Reservation:</strong> July 3, 2025 at 8:00 PM
+                </div>
+                <div style="background:#f6f8fa;border-radius:12px;padding:14px 10px 10px 10px;margin:0 auto 0 auto;max-width:320px;box-shadow:0 2px 8px rgba(0,0,0,0.04);margin-bottom:10px;">
+                    <div style="font-weight:600;font-size:1.07rem;margin-bottom:6px;">Official Website</div>
+                    <div style="color:#555;font-size:0.98rem;margin-bottom:10px;">Award-winning oceanfront dining at the Four Seasons Resort Hualalai. Fresh seafood, local ingredients, and sunset views.</div>
+                    <a href="https://www.fourseasons.com/hualalai/dining/restaurants/ulu/" style="display:inline-block;padding:8px 22px;background:#6c47a3;color:white;border-radius:8px;font-weight:600;text-decoration:none;box-shadow:0 1px 4px rgba(0,0,0,0.07);transition:background 0.2s;margin-bottom:8px;">Visit Website</a>
+                    <a href="https://www.fourseasons.com/hualalai/dining/menus/ulu_dinner/" style="display:inline-block;padding:8px 22px;background:#fff;border:2px solid #6c47a3;color:#6c47a3;border-radius:8px;font-weight:600;text-decoration:none;box-shadow:0 1px 4px rgba(0,0,0,0.07);transition:background 0.2s;margin-top:8px;">View Dinner Menu</a>
+                </div>
+            </div>
+        </div>
+        <div id="maps" class="tab-content">
+            <p>Interactive maps and key locations coming soon!</p>
+        </div>
+        <div id="info" class="tab-content">
+            <h3>Useful Links</h3>
+            <ul style="margin: 16px 0 24px 18px; font-size: 1.1rem;">
+                <li>
+                    <a href="https://www.aquaaston.com/hotels/aston-kona-by-the-sea/gallery" style='color:#007cba;text-decoration:underline;'>Aston Kona by the Sea Official Photo Gallery</a>
+                </li>
+            </ul>
+            <p>Trip info, tips, and emergency contacts coming soon!</p>
+        </div>
+        <div id="contacts" class="tab-content">
+            <p>Family contacts and group chat links coming soon!</p>
+        </div>
+    </div>
+    <div id="modal" class="modal" onclick="if(event.target===this)closeModal()">
+        <div class="modal-content" id="modal-content"></div>
+    </div>
+</body>
+</html>
