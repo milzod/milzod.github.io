@@ -6,7 +6,6 @@
     <title>Hawaii Big Island Trip - July 2025</title>
     <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiSGF3YWlpIEJpZyBJc2xhbmQgVHJpcCIsInNob3J0X25hbWUiOiJIYXdhaWkgVHJpcCIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwic3RhcnRfdXJsIjoiLyIsInRoZW1lX2NvbG9yIjoiIzAwN2NiYSIsImJhY2tncm91bmRfY29sb3IiOiIjZmZmZmZmIiwiaWNvbnMiOlt7InNyYyI6ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjNhV1IwYUQwaU1qUXdJaUJvWldsbmFIUTlJakl6TmlJZ2RtbGxkMEp2ZUQwaU1DQXdJakkwTUNBeU16WWlJSGh0Ykc1elBTSm9kSFJ3T2k4dmQzZDNMbmN6TG05eVp5OHlNREF3TDNOMlp5SStQR05wY21Oc1pTQmplRDBpTVRJd0lpQmplVDBpTVRFNElpQnlQU0l4TURBaUlHWnBiR3c5SWlNd01EZGpZbUVpTHo0OGRHVjRkQ0I0UFNJeE1qQWlJSGs5SWpFME9DSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm1sc2JEMGlJM2RvYVhSbElpQm1iMjUwTFhOcGVtVTlJakV5SWo1SVBDOTBaWGgwUGp3dmMzWm5QZz09IiwidHlwZSI6ImltYWdlL3N2Zyt4bWwiLCJzaXplcyI6IjI0MHgyNDAifV19">
     <meta name="theme-color" content="#007cba">
-    <link rel="apple-touch-icon" href="/icon.png">
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -239,6 +238,8 @@
             border-radius: 18px;
             width: 95vw;
             max-width: 420px;
+            max-height: 80vh;
+            overflow-y: auto;
             position: relative;
             text-align: center;
         }
@@ -515,10 +516,50 @@
             </div>
             <div class="day-card">
                 <div class="day-header">
-                    <div>July 4 - Independence Day</div>
+                    <div>July 4 - Resort, Fireworks, and Manta Ray Night Snorkel</div>
                     <div class="weather-badge" onclick="showHourlyForecastModal('July 4')">☀️ 83°F</div>
                 </div>
                 <div class="day-content">
+                    <div class="activity">
+                        <div class="activity-time">Morning</div>
+                        <div class="activity-title">
+                            Papakolea Green Sand Beach
+                            <button class="info-btn" onclick="showInfoModal('Papakolea Green Sand Beach', `Experience one of only four green sand beaches in the world! Papakolea Beach has a fascinating history and unique geological formation.<br/><br/><strong>About Green Sand Beaches:</strong><br/>• Formed by olivine crystals from volcanic eruptions<br/>• Only four green sand beaches exist worldwide<br/>• The green color comes from the mineral olivine<br/>• Papakolea is one of the most accessible green sand beaches<br/><br/><strong>What to Expect:</strong><br/>• Stunning green-tinted sand unlike any other beach<br/>• Dramatic coastal cliffs and ocean views<br/>• Unique photo opportunities<br/>• Often less crowded due to remote location<br/>• Perfect for experiencing Hawaii's volcanic geology<br/><br/><strong>Getting There:</strong><br/>• Located at the southernmost point of the Big Island<br/>• Requires a hike or 4WD vehicle access<br/>• The journey is part of the adventure<br/><br/><strong>Safety Notes:</strong><br/>• Be aware of ocean conditions<br/>• Strong currents can be present<br/>• Bring plenty of water for the hike<br/>• Check weather conditions before visiting`, null, 'https://www.google.com/maps/search/papakolea+green+sand+beach+hawaii', 'Google Maps search for Papakolea Green Sand Beach in Hawaii')">Beach Info</button>
+                        </div>
+                        <div class="activity-desc">Papakolea beach. It has a fascinating history and is one of the only four green sand beaches in the world!</div>
+                        <div class="image-gallery">
+                            <img src="https://i.pinimg.com/originals/b5/26/9a/b5269ae90fbda21695d5e8fee680269a.jpg" alt="Papakolea Green Sand Beach 1" class="gallery-image" onclick="showImageModal(this.src, 'Papakolea Green Sand Beach 1')">
+                            <img src="https://listabuzz.com/wp-content/uploads/2015/07/Papakolea-Green-Sand-Beach.jpg" alt="Papakolea Green Sand Beach 2" class="gallery-image" onclick="showImageModal(this.src, 'Papakolea Green Sand Beach 2')">
+                        </div>
+                        <div class="image-counter">2 photos - Click to view larger</div>
+                        <div class="map-section" style="margin:18px 0 18px 0;padding:14px 0 10px 0;text-align:center;background:#f6f8fa;border-radius:14px;">
+                            <div style="font-weight:600;font-size:1.08rem;margin-bottom:8px;color:#007cba;">Directions from Royal Kona Resort</div>
+                            <a href="https://maps.apple.com/?saddr=Royal+Kona+Resort,+75-5852+Alii+Dr,+Kailua-Kona,+HI+96740,+United+States&daddr=Papakolea+Green+Sand+Beach,+Hawaii&dirflg=d" target="_blank" style="display:inline-block;">
+                                <img src="RtoC.png" alt="Directions to Papakolea Green Sand Beach (from Royal Kona Resort)" style="width:100%;max-width:420px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:8px;">
+                            </a>
+                            <div><a href="https://maps.apple.com/?saddr=Royal+Kona+Resort,+75-5852+Alii+Dr,+Kailua-Kona,+HI+96740,+United+States&daddr=Papakolea+Green+Sand+Beach,+Hawaii&dirflg=d" target="_blank" style="color:#007cba;text-decoration:underline;font-weight:500;font-size:1.01rem;">Open Directions in Apple Maps</a></div>
+                        </div>
+                    </div>
+                    <div class="activity">
+                        <div class="activity-time">Afternoon</div>
+                        <div class="activity-title">
+                            Black Sand Beach
+                            <button class="info-btn" onclick="showInfoModal('Black Sand Beach', `Experience the unique beauty of Hawaii's black sand beaches, created by volcanic activity.<br/><br/><strong>About Black Sand Beaches:</strong><br/>• Formed when hot lava meets the ocean and shatters into tiny fragments<br/>• The black sand is actually tiny pieces of volcanic glass<br/>• These beaches are rare and found only in volcanic regions<br/>• Perfect for photography and experiencing Hawaii's volcanic landscape<br/><br/><strong>What to Expect:</strong><br/>• Stunning contrast between black sand and blue ocean<br/>• Unique photo opportunities<br/>• Often less crowded than white sand beaches<br/>• Great for sunset viewing<br/><br/><strong>Safety Notes:</strong><br/>• Be aware of ocean conditions<br/>• Black sand can get very hot in the sun<br/>• Some areas may have strong currents<br/>• Always check local conditions before swimming`, null, 'https://www.google.com/maps/search/black+sand+beach+hawaii+big+island', 'Google Maps search for black sand beaches on Hawaii Big Island')">Beach Info</button>
+                        </div>
+                        <div class="activity-desc">Experience the unique beauty of Hawaii's black sand beaches, created by volcanic activity</div>
+                        <div class="image-gallery">
+                            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrCSvkamTZqxXUkopI-m1rzzUeIhoz8c7-AkNgfXyPwszTeCfD4ovAMkeGp4K-2Z-AGPhMRZL7Gd_D8VcUShr-EHfq6UAyoMcdPtEz56_SIkoz6t9cNoqBZA-ALBKSq2fEAhZXFTQ=s680-w680-h510-rw" alt="Black Sand Beach 1" class="gallery-image" onclick="showImageModal(this.src, 'Black Sand Beach 1')">
+                            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr9rgDNmxjx6oDWBi-rxoV5S5cLYNtPX5dkjpAa073Az48DovyBzhi6J-1n4Wp5ImVp13TpuyNrgidpV9Z5zsyy4UWUhvEJIkdU2VUo5jTOEyCYvbl6YsZlTWW40X2MybAkVvZH2g=s680-w680-h510-rw" alt="Black Sand Beach 2" class="gallery-image" onclick="showImageModal(this.src, 'Black Sand Beach 2')">
+                        </div>
+                        <div class="image-counter">2 photos - Click to view larger</div>
+                        <div class="map-section" style="margin:18px 0 18px 0;padding:14px 0 10px 0;text-align:center;background:#f6f8fa;border-radius:14px;">
+                            <div style="font-weight:600;font-size:1.08rem;margin-bottom:8px;color:#007cba;">Directions from Papakolea Green Sand Beach</div>
+                            <a href="https://maps.apple.com/?saddr=Papakolea+Green+Sand+Beach,+Hawaii&daddr=Black+Sand+Beach,+Hawaii+Big+Island&dirflg=d" target="_blank" style="display:inline-block;">
+                                <img src="GtoB.png" alt="Directions to Black Sand Beach (from Papakolea Green Sand Beach)" style="width:100%;max-width:420px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:8px;">
+                            </a>
+                            <div><a href="https://maps.apple.com/?saddr=Papakolea+Green+Sand+Beach,+Hawaii&daddr=Black+Sand+Beach,+Hawaii+Big+Island&dirflg=d" target="_blank" style="color:#007cba;text-decoration:underline;font-weight:500;font-size:1.01rem;">Open Directions in Apple Maps</a></div>
+                        </div>
+                    </div>
                     <div class="activity">
                         <div class="activity-time">Evening</div>
                         <div class="activity-title">
@@ -532,56 +573,6 @@
                         </div>
                         <div class="image-counter">2 photos - Click to view larger</div>
                     </div>
-                </div>
-            </div>
-            <div class="day-card">
-                <div class="day-header">
-                    <div>July 5 - Beach & Manta Rays</div>
-                    <div class="weather-badge" onclick="showHourlyForecastModal('July 5')">🌤️ 84°F</div>
-                </div>
-                <div class="day-content">
-                    <div class="activity">
-                        <div class="activity-time">Early Morning</div>
-                        <div class="activity-title">
-                            Stargazing Tour 12:30 am to 2:30 am
-                            <button class="info-btn" onclick="showInfoModal('Mauna Kea Stargazing Tour Experience with Free Professional Photos', `Experience a 2.5-hour stargazing and photo adventure on the remote slopes of Mauna Kea or Mauna Loa with Epic Tours.<br><br><strong>Tour Highlights:</strong><br>• 2-hour stargazing experience on remote slopes of Mauna Kea/Mauna Loa<br>• Professional photos of you and group with galaxies, nebulas, and Milky Way<br>• High-powered Astro-Cam for viewing deep space objects<br>• Led by James Ward, expert astro-photographer and former analog-astronaut<br>• Check-in on Mauna Loa Observatory Road with free parking<br><br><strong>Your Adventure in 3 Parts:</strong><br>1. <strong>Journey to Remote Location:</strong> Far from tourist spots for truly dark skies. Celestial objects and constellations pointed out with powerful green laser pointer. Hear about James' time as an Analog-Astronaut and ancient Polynesian navigation.<br><br>2. <strong>Deep Space Viewing:</strong> Most sophisticated, light-sensitive camera/scope in Hawaii. Awe-inspiring views of galaxies and nebulas you didn't know were possible.<br><br>3. <strong>Professional Photography:</strong> Stellar photos of you with the Milky Way. Deep space photos and portraits included. Photo upgrades available.<br><br><strong>Time Slots:</strong><br>• 7:00 PM - 11:30 PM<br>• 12:30 AM - 4:00 AM<br><br><strong>What's Included:</strong><br>• 2.5-hour tour with professional guide<br>• Parka jackets provided (temperatures can dip to 40°F/4°C)<br>• Professional photos with Milky Way background<br>• Deep space object viewing through Astro-Cam<br>• Complimentary parking<br><br><strong>Restrictions:</strong><br>• No asthma or respiratory problems<br>• No heart or cardiovascular issues<br>• Not wheelchair accessible<br>• Not recommended for children under 5<br>• Maximum 11 participants<br><br><strong>What to Bring:</strong><br>• Snacks and bottled water<br>• Warm clothing (dress for 40°F/4°C)<br>• Use restroom before check-in (no facilities on tour)<br>• For best photos: wear blue jeans or red outfits (avoid black/white pants)<br><br><strong>Important Notes:</strong><br>• Weather Guarantee: See the stars or come again for free!<br>• Book early - tours fill up quickly<br>• Book on first nights of vacation in case of weather rescheduling<br>• Call day before to reconfirm booking<br>• Photos take ~5 days to edit and deliver<br>• Does NOT visit Mauna Kea summit or Visitor Center<br><br><a href='https://www.hawaiiactivities.com/en/hawaii/big_island/a/163292' style='color:#007cba;text-decoration:underline;'>View Official Tour Page</a>`, 'https://cdn2.veltra.com/ptr/20210619195024_711204351_14482_0.jpg?imwidth=550&impolicy=custom', 'https://www.hawaiiactivities.com/en/hawaii/big_island/a/163292', 'Official Hawaii Activities page for Mauna Kea Stargazing Tour with Epic Tours. Book your stargazing adventure.')">Tour Details</button>
-                        </div>
-                        <div class="activity-desc">Enjoy stargazing from an exclusive location on the slopes of Mauna Kea with expert narration led by a professional astro-photographer and analog-astronaut on this 2-hour Hawaii stargazing & astro-photography tour. Photos from your tour are included!</div>
-                        <div class="image-gallery">
-                            <img src="https://cdn2.veltra.com/ptr/20210619195024_711204351_14482_0.jpg?imwidth=550&impolicy=custom" alt="Stargazing Tour 1" class="gallery-image" onclick="showImageModal(this.src, 'Stargazing Tour 1')">
-                            <img src="https://cdn2.veltra.com/ptr/20210619195024_1574239284_14482_0.jpg?imwidth=550&impolicy=custom" alt="Stargazing Tour 2" class="gallery-image" onclick="showImageModal(this.src, 'Stargazing Tour 2')">
-                        </div>
-                        <div class="image-counter">2 photos - Click to view larger</div>
-                    </div>
-                    <div class="activity">
-                        <div class="activity-time">Afternoon</div>
-                        <div class="activity-title">
-                            Beach Day
-                            <button class="info-btn">Best Beaches</button>
-                        </div>
-                        <div class="activity-desc">Relax at Hapuna Beach or explore local coves</div>
-                    </div>
-
-                    <div class="activity">
-                        <div class="activity-time">Evening</div>
-                        <div class="activity-title">
-                            Dinner at Lava Lava Beach Club
-                            <button class="info-btn" onclick="showInfoModal('Lava Lava Beach Club', `<strong>Description:</strong><br/>Lava Lava Beach Club is a premier beachfront restaurant at Waikoloa, offering relaxed island cuisine in an open-air setting with seats right on the sand. Enjoy stunning sunsets, swaying coconut trees, and tropical trade winds.<br/><br/><strong>Hours:</strong> 11:30am – 9:00pm daily<br/><strong>Seating:</strong> First come, first served. Check in with the host on arrival. If there is a wait, leave your cell number and stroll the beach—text notification when your table is ready.<br/><strong>Address:</strong> <a href='https://maps.apple.com/?address=69-1081%20Ku%27uali%27i%20Pl,%20Waikoloa%20Village,%20HI%2096778' style='color:#007cba;text-decoration:underline;'>69-1081 Ku'uali'i Pl, Waikoloa Village, HI 96778</a><br/><strong>Menu Highlights:</strong> Fresh fish tacos, burgers, steak, Hawaiian seafood, creative chef specials, and tropical drinks.<br/><strong>Reservations:</strong> No reservations. In-person waitlist only.<br/><strong>Delivery:</strong> In-service dining only. No delivery services.<br/><br/><a href='https://lavalavabeachclub.com/bigisland/' style='color:#007cba;text-decoration:underline;'>View Official Website</a>`, 'https://lavalavabeachclub.com/bigisland/wp-content/uploads/2016/03/Beach-Front-Dining-LLBC-Slider.png', 'https://lavalavabeachclub.com/bigisland/', 'Official website for Lava Lava Beach Club')">Restaurant Info</button>
-                        </div>
-                        <div class="activity-desc">Beachfront dining with toes in the sand</div>
-                        <div class="image-gallery" style="margin-bottom:10px;">
-                            <img src="https://lavalavabeachclub.com/bigisland/wp-content/uploads/2016/03/Beach-Front-Dining-LLBC-Slider.png" alt="Lava Lava Beach Club 1" style="width:100%;max-height:180px;object-fit:cover;border-radius:18px;margin-bottom:14px;" onclick="showImageModal(this.src, 'Lava Lava Beach Club 1')">
-                        </div>
-                        <div class="image-counter">1 photo - Click to view larger</div>
-                        <div class="map-section" style="margin:18px 0 18px 0;padding:14px 0 10px 0;text-align:center;background:#f6f8fa;border-radius:14px;">
-                            <div style="font-weight:600;font-size:1.08rem;margin-bottom:8px;color:#007cba;">Directions from Magic Sands Beach</div>
-                            <a href="https://maps.apple.com/?daddr=69-1081+Ku%27uali%27i+Pl+Waikoloa+Village+HI+96778&saddr=77-6474+Ali%CA%BBi+Dr+Kailua-Kona+HI+96740&dirflg=d" target="_blank" style="display:inline-block;">
-                                <img src="mtol.png" alt="Directions to Lava Lava Beach Club (from Magic Sands)" style="width:100%;max-width:420px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:8px;">
-                            </a>
-                            <div><a href="https://maps.apple.com/?daddr=69-1081+Ku%27uali%27i+Pl+Waikoloa+Village+HI+96778&saddr=77-6474+Ali%CA%BBi+Dr+Kailua-Kona+HI+96740&dirflg=d" target="_blank" style="color:#007cba;text-decoration:underline;font-weight:500;font-size:1.01rem;">Open Directions in Apple Maps</a></div>
-                        </div>
-                    </div>
-
                     <div class="activity">
                         <div class="activity-time">Night</div>
                         <div class="activity-title">
@@ -589,17 +580,92 @@
                             <button class="info-btn" onclick="showInfoModal('Manta Ray Night Snorkel (Coral Reef Adventures)', `Experience the #1 tour in Kailua Kona! Float under the stars and watch gentle giant manta rays glide within inches of you.<br><br><strong>Departure:</strong><br>Meet at Honokohau Harbor<br>Arrive 15 minutes early<br><br><strong>Return:</strong><br>Return to Honokohau Harbor<br>Tour duration is 2 hours<br><br><strong>Restrictions:</strong><br>Ages 7-70<br>Must be able to swim 25 yards<br>No heart problems or medical conditions<br>No pregnancies<br>270 pound weight limit<br>Not wheelchair accessible<br><br>All snorkel gear and wetsuit provided. Small group experience (max 12 guests). 92% manta sighting rate—if you don't see mantas, you can rebook for free!`, null, 'https://www.coralreefsnorkeladventures.com/manta-ray-snorkel-kona/?gad_source=1&gad_campaignid=21430158171&gbraid=0AAAAADOzwkzUdMyl6TNM446xH14etRjN2&gclid=CjwKCAjwmenCBhA4EiwAtVjzmpzwP2LiBPI9vNJlUIfflWNgnC6_c5QVf8WGhj9ZNQqpZLWYm9RJ_BoCAc0QAvD_BwE', 'Top-rated manta ray night snorkel tour. Small groups, all gear provided, 92% manta sighting rate.')">Experience Info</button>
                         </div>
                         <div class="activity-desc">Unforgettable encounter with gentle giant manta rays</div>
+                        <div class="image-gallery">
+                            <img src="https://www.coralreefsnorkeladventures.com/wp-content/uploads/2022/02/ma-09.jpg-e1645044042824.webp" alt="Manta Ray Snorkel 1" class="gallery-image" onclick="showImageModal(this.src, 'Manta Ray Snorkel 1')">
+                            <img src="https://www.coralreefsnorkeladventures.com/wp-content/uploads/2022/02/ma10.jpg-2-e1645043882394.webp" alt="Manta Ray Snorkel 2" class="gallery-image" onclick="showImageModal(this.src, 'Manta Ray Snorkel 2')">
+                        </div>
+                        <div class="image-counter">2 photos - Click to view larger</div>
                     </div>
                 </div>
-                <div class="image-gallery">
-                    <img src="https://www.coralreefsnorkeladventures.com/wp-content/uploads/2022/02/ma-09.jpg-e1645044042824.webp" alt="Manta Ray Snorkel 1" class="gallery-image" onclick="showImageModal(this.src, 'Manta Ray Snorkel 1')">
-                    <img src="https://www.coralreefsnorkeladventures.com/wp-content/uploads/2022/02/ma10.jpg-2-e1645043882394.webp" alt="Manta Ray Snorkel 2" class="gallery-image" onclick="showImageModal(this.src, 'Manta Ray Snorkel 2')">
-                </div>
-                <div class="image-counter">2 photos - Click to view larger</div>
             </div>
             <div class="day-card">
                 <div class="day-header">
-                    <div>July 6 - Waterfall, Volcanoes & Black Sand Beach</div>
+                    <div>July 5 - Beach & Stargazing</div>
+                    <div class="weather-badge" onclick="showHourlyForecastModal('July 5')">🌤️ 84°F</div>
+                </div>
+                <div class="day-content">
+                    <div class="activity">
+                        <div class="activity-time">Morning</div>
+                        <div class="activity-title">
+                            Beach Day
+                            <button class="info-btn" onclick="showInfoModal('Hapuna Beach State Recreation Area', `Experience one of Hawaii's most beautiful white sand beaches at Hapuna Beach State Recreation Area.<br/><br/><strong>About Hapuna Beach:</strong><br/>• One of the largest white sand beaches on the Big Island<br/>• Consistently ranked as one of Hawaii's best beaches<br/>• Perfect for swimming, snorkeling, and sunbathing<br/>• Crystal clear turquoise waters<br/>• Stunning panoramic views of the coastline<br/><br/><strong>What to Expect:</strong><br/>• Half-mile long pristine white sand beach<br/>• Gentle waves perfect for swimming<br/>• Excellent snorkeling opportunities<br/>• Beautiful sunset views<br/>• Picnic areas and restroom facilities<br/>• Lifeguard services available<br/><br/><strong>Activities:</strong><br/>• Swimming and bodyboarding<br/>• Snorkeling in clear waters<br/>• Sunbathing on soft white sand<br/>• Beachcombing and shell collecting<br/>• Photography and sightseeing<br/>• Picnicking with ocean views<br/><br/><strong>Facilities:</strong><br/>• Parking lot with easy beach access<br/>• Restrooms and outdoor showers<br/>• Picnic tables and shelters<br/>• Lifeguard tower<br/>• Beach equipment rentals nearby<br/><br/><strong>Best Time to Visit:</strong><br/>• Morning for calmest waters<br/>• Weekdays for fewer crowds<br/>• Year-round swimming conditions<br/><br/><strong>Safety Notes:</strong><br/>• Check ocean conditions before swimming<br/>• Be aware of strong currents during high surf<br/>• Use reef-safe sunscreen<br/>• Stay hydrated in the sun`, 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Hapuna_beach_panorama.jpg/1600px-Hapuna_beach_panorama.jpg', 'https://dlnr.hawaii.gov/dsp/parks/hawaii/hapuna-beach-state-recreation-area/', 'Official Hawaii State Parks website for Hapuna Beach State Recreation Area.')">Beach Info</button>
+                        </div>
+                        <div class="activity-desc">Relax at Hapuna Beach</div>
+                        <div class="image-gallery" style="margin-bottom:10px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Hapuna_beach_panorama.jpg/1600px-Hapuna_beach_panorama.jpg" alt="Hapuna Beach Panorama" style="width:100%;max-height:180px;object-fit:cover;border-radius:18px;margin-bottom:14px;" onclick="showImageModal(this.src, 'Hapuna Beach Panorama')">
+                        </div>
+                        <div class="image-counter">1 photo - Click to view larger</div>
+                        <div class="map-section" style="margin:18px 0 18px 0;padding:14px 0 10px 0;text-align:center;background:#f6f8fa;border-radius:14px;">
+                            <div style="font-weight:600;font-size:1.08rem;margin-bottom:8px;color:#007cba;">Directions from Royal Kona Resort</div>
+                            <a href="https://maps.apple.com/?saddr=Royal+Kona+Resort,+75-5852+Alii+Dr,+Kailua-Kona,+HI+96740,+United+States&daddr=Hapuna+Beach+State+Recreation+Area,+Hawaii&dirflg=d" target="_blank" style="display:inline-block;">
+                                <img src="RtoHB.png" alt="Directions to Hapuna Beach (from Royal Kona Resort)" style="width:100%;max-width:420px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:8px;">
+                            </a>
+                            <div><a href="https://maps.apple.com/?saddr=Royal+Kona+Resort,+75-5852+Alii+Dr,+Kailua-Kona,+HI+96740,+United+States&daddr=Hapuna+Beach+State+Recreation+Area,+Hawaii&dirflg=d" target="_blank" style="color:#007cba;text-decoration:underline;font-weight:500;font-size:1.01rem;">Open Directions in Apple Maps</a></div>
+                        </div>
+                    </div>
+
+                    <div class="activity">
+                        <div class="activity-time">Afternoon</div>
+                        <div class="activity-title">
+                            Lunch at Lava Lava Beach Club
+                            <button class="info-btn" onclick="showInfoModal('Lava Lava Beach Club', `<strong>Description:</strong><br/>Lava Lava Beach Club is a premier beachfront restaurant at Waikoloa, offering relaxed island cuisine in an open-air setting with seats right on the sand. Enjoy stunning sunsets, swaying coconut trees, and tropical trade winds.<br/><br/><strong>Hours:</strong> 11:30am – 9:00pm daily<br/><strong>Seating:</strong> First come, first served. Check in with the host on arrival. If there is a wait, leave your cell number and stroll the beach—text notification when your table is ready.<br/><strong>Address:</strong> <a href='https://maps.apple.com/?address=69-1081%20Ku%27uali%27i%20Pl,%20Waikoloa%20Village,%20HI%2096778' style='color:#007cba;text-decoration:underline;'>69-1081 Ku'uali'i Pl, Waikoloa Village, HI 96778</a><br/><strong>Menu Highlights:</strong> Fresh fish tacos, burgers, steak, Hawaiian seafood, creative chef specials, and tropical drinks.<br/><strong>Reservations:</strong> No reservations. In-person waitlist only.<br/><strong>Delivery:</strong> In-service dining only. No delivery services.<br/><br/><a href='https://lavalavabeachclub.com/bigisland/' style='color:#007cba;text-decoration:underline;'>View Official Website</a>`, 'https://lavalavabeachclub.com/bigisland/wp-content/uploads/2016/03/Beach-Front-Dining-LLBC-Slider.png', 'https://lavalavabeachclub.com/bigisland/', 'Official website for Lava Lava Beach Club')">Restaurant Info</button>
+                        </div>
+                        <div class="activity-desc">Beachfront dining with toes in the sand</div>
+                        <div class="image-gallery" style="margin-bottom:10px;">
+                            <img src="https://lavalavabeachclub.com/bigisland/wp-content/uploads/2016/03/Beach-Front-Dining-LLBC-Slider.png" alt="Lava Lava Beach Club 1" style="width:100%;max-height:180px;object-fit:cover;border-radius:18px;margin-bottom:14px;" onclick="showImageModal(this.src, 'Lava Lava Beach Club 1')">
+                        </div>
+                        <div class="image-counter">1 photo - Click to view larger</div>
+                        <!-- Map section for Lava Lava Beach Club -->
+                        <div class="map-section" style="margin:18px 0 18px 0;padding:14px 0 10px 0;text-align:center;background:#f6f8fa;border-radius:14px;">
+                            <div style="font-weight:600;font-size:1.08rem;margin-bottom:8px;color:#007cba;">Directions from Hapuna Beach</div>
+                            <a href="https://maps.apple.com/?saddr=Hapuna+Beach+State+Recreation+Area,+Hawaii&daddr=69-1081+Ku%27uali%27i+Pl,+Waikoloa+Village,+HI+96778&dirflg=d" target="_blank" style="display:inline-block;">
+                                <img src="HBtoLV.png" alt="Directions to Lava Lava Beach Club (from Hapuna Beach)" style="width:100%;max-width:420px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:8px;">
+                            </a>
+                            <div><a href="https://maps.apple.com/?saddr=Hapuna+Beach+State+Recreation+Area,+Hawaii&daddr=69-1081+Ku%27uali%27i+Pl,+Waikoloa+Village,+HI+96778&dirflg=d" target="_blank" style="color:#007cba;text-decoration:underline;font-weight:500;font-size:1.01rem;">Open Directions in Apple Maps</a></div>
+                        </div>
+                    </div>
+
+                    <div class="activity">
+                        <div class="activity-time">Late Afternoon</div>
+                        <div class="activity-title">
+                            🚗 Mauna Kea Stargazing Drive
+                            <button class="info-btn" onclick="showInfoModal('Mauna Kea Self-Drive Stargazing Experience', `Experience the magic of Mauna Kea's world-class stargazing at the Visitor Information Station (VIS).<br><br><strong>Location:</strong> Mauna Kea Visitor Information Station (VIS)<br><strong>Elevation:</strong> 9,200 feet<br><strong>Best Time:</strong> Arrive 1-1.5 hours before sunset for acclimation<br><br><strong>What to Expect:</strong><br>• Free stargazing with telescopes provided by VIS staff<br>• Laser-guided sky tours by astronomy volunteers<br>• Educational exhibits and astronomy videos<br>• Stunning sunset views from Pu'ukalepeamoa/Sunset Hill<br>• Some of the world's darkest skies for stargazing<br><br><strong>Important Notes:</strong><br>• No reservations needed for basic stargazing<br>• Dress warmly - temperatures can drop to 40°F/4°C<br>• Allow 1.5-2 hours drive time each direction<br>• Use low gear on descent to avoid brake overheating<br><br><a href='https://www.ifa.hawaii.edu/info/vis/' style='color:#007cba;text-decoration:underline;'>Official VIS Website</a>`, 'https://cdn2.veltra.com/ptr/20210619195024_711204351_14482_0.jpg?imwidth=550&impolicy=custom', 'https://www.ifa.hawaii.edu/info/vis/', 'Official Mauna Kea Visitor Information Station website with current conditions and visitor information.')">Drive Info</button>
+                        </div>
+                        <div class="activity-desc">🛣 Getting There<br>
+                             Drive up from Royal Kona via Saddle Road (Hwy 200), then take the Mauna Kea Access Road (~mile 28).<br><br>
+                             The road is paved all the way to VIS and drivable by any standard rental car.<br><br>
+                             Expect a 1.5-2 hours trip each direction.<br><br>
+                             🌄 Before Sunset<br><br>
+                             Arrive about 1-1.5 hours before sunset to acclimate—VIS sits at 9,200 ft. Rangers recommend this to reduce altitude effects.<br><br>
+                             Check out the VIS exhibits, watch the astronomy video, grab a snack or hot drink.<br><br>
+                             🌅 Sunset & Twilight<br>
+                             A short hike (e.g., Pu'ukalepeamoa/Sunset Hill) just above VIS offers stunning sunset views above the clouds<br><br>
+                             🌌 Stargazing<br>
+                             After dark, VIS staff or local astronomy volunteers often set up telescopes and laser-guided sky tours (no reservation needed usually).<br><br>
+                             Reddit users note: "The Visitor's Center has telescopes set up nightly… road is paved all the way up to the Visitor's Center"<br><br>
+                             🔚 Post-Stargazing Options<br>
+                             Stay near VIS until late, then drive back down. Watch brakes on descent—use low gear to avoid overheating</div>
+                        <div class="image-gallery">
+                            <img src="https://cdn2.veltra.com/ptr/20210619195024_711204351_14482_0.jpg?imwidth=550&impolicy=custom" alt="Stargazing Tour 1" class="gallery-image" onclick="showImageModal(this.src, 'Stargazing Tour 1')">
+                            <img src="https://cdn2.veltra.com/ptr/20210619195024_1574239284_14482_0.jpg?imwidth=550&impolicy=custom" alt="Stargazing Tour 2" class="gallery-image" onclick="showImageModal(this.src, 'Stargazing Tour 2')">
+                        </div>
+                        <div class="image-counter">2 photos - Click to view larger</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day-card">
+                <div class="day-header">
+                    <div>July 6 - Waterfall & Volcanoes </div>
                     <div class="weather-badge" onclick="showHourlyForecastModal('July 6')">⛅ 79°F</div>
                 </div>
                 <div class="day-content">
@@ -643,23 +709,7 @@
                         <div class="activity-time">Afternoon</div>
                         <div class="activity-title">
                             Hawaii Volcanoes National Park
-                            <button class="info-btn" onclick="showInfoModal('Hawaii Volcanoes National Park & Rainbow Falls Tour', `
-                                <strong>Tour Highlights:</strong><br>
-                                • Explore Hawaii Volcanoes National Park<br>
-                                • Stop at the Kilauea Visitor Center
-                                • Overlook of Kilauea Crater
-                                • Walk through Thurston Lava Tube
-                                <br>
-                                <strong>What You'll Experience:</strong><br>
-                                • Walk through lush rainforest and volcanic landscapes<br>
-                                • Learn about the geology and history of the Big Island<br>
-                                • See unique flora and fauna<br>
-                                <br>
-                                <strong>Duration:</strong> Approx. 4 hours<br>
-                                <strong>Accessibility:</strong> Moderate walking, not wheelchair accessible<br>
-                                <br>
-                               
-                            `, 'https://dynamic-media.tacdn.com/media/photo-o/2e/d1/d4/74/caption.jpg?w=1400&h=1000&s=1', 'https://www.nps.gov/havo/index.htm', 'Official National Park Service site for Hawaii Volcanoes National Park.')">Park Guide</button>
+                            <button class="info-btn" onclick="showInfoModal('Hawaii Volcanoes National Park Tour', `<strong>🕑 2:00 PM - 6:00 PM: Lava Tube and Chain of Craters Drive Adventure</strong><br><br><strong>Tour Overview:</strong><br>Experience the raw power of Hawaii's active volcanoes with a comprehensive tour of Hawaii Volcanoes National Park. This 4-hour adventure takes you through some of the most dramatic volcanic landscapes on Earth.<br><br><strong>Detailed Itinerary:</strong><br><br><strong>1. Lava Tube Visit</strong><br>• Start with exploring a lava tube - a natural tunnel formed by flowing lava<br>• Learn about volcanic geology and formation processes<br>• Experience the cool, dark environment inside the tube<br><br><strong>2. Chain of Craters Drive (25-mile loop)</strong><br>Follow this scenic drive with stops at these must-see locations in order:<br><br>• <strong>Haakulamanu (Sulphur Banks)</strong> - Short geothermal walk through steam vents<br>• <strong>Steam Vents</strong> - See steam rising from the ground<br>• <strong>Devastation Trail</strong> - 1-mile round trip through a devastated landscape<br>• <strong>Luamanu & Puhimanu Crater Viewpoints</strong> - Spectacular crater views<br>• <strong>Kookoolau Crater + Devils Throat</strong> - Deep crater formations<br>• <strong>Hiilaka Crater</strong> - Another impressive volcanic feature<br>• <strong>Mau Loa o Maunaulu Viewpoint</strong> - Panoramic vistas<br>• <strong>Puu Loa Petroglyph Trail</strong> - 1.4-mile round trip to ancient Hawaiian rock carvings (highly recommended!)<br>• <strong>Hālona Kahakai & Muliwai a Pele Viewpoints</strong> - Coastal perspectives<br>• <strong>Hōlei Sea Arch</strong> - Dramatic coastal endpoint where lava meets the ocean<br><br><strong>What You'll Experience:</strong><br>• Walk through lush rainforest and volcanic landscapes<br>• Learn about the geology and history of the Big Island<br>• See unique flora and fauna adapted to volcanic conditions<br>• Witness the ongoing process of island formation<br>• Experience the power and beauty of active volcanoes<br><br><strong>Important Notes:</strong><br>• <strong>Duration:</strong> Approximately 4 hours<br>• <strong>Physical Level:</strong> Moderate walking required<br>• <strong>Accessibility:</strong> Not wheelchair accessible<br>• <strong>Weather:</strong> Conditions can change rapidly - bring layers<br>• <strong>Safety:</strong> Stay on marked trails and follow ranger instructions<br><br><strong>What to Bring:</strong><br>• Plenty of water and snacks (no food/gas available along the drive)<br>• Sturdy walking shoes<br>• Light jacket or sweater (can be cool at higher elevations)<br>• Camera for spectacular photo opportunities<br>• Sun protection (hat, sunscreen)<br><br><strong>Park Information:</strong><br>• <strong>Entrance Fee:</strong> $30 per vehicle (valid for 7 days)<br>• <strong>Best Time:</strong> Afternoon allows for better lighting and fewer crowds<br>• <strong>Ranger Programs:</strong> Available daily - check visitor center for schedules<br><br><a href='https://www.nps.gov/havo/index.htm' style='color:#007cba;text-decoration:underline;'>Official National Park Website</a>`, 'https://dynamic-media.tacdn.com/media/photo-o/2e/d1/d4/74/caption.jpg?w=1400&h=1000&s=1', 'https://www.nps.gov/havo/index.htm', 'Official National Park Service site for Hawaii Volcanoes National Park.')">Park Adventure</button>
                         </div>
                         <div class="activity-desc">Sample a cross-section of outdoor sights on the Big Island during this shore excursion exploring Volcanoes National Park, waterfall, black sand beach and more.</div>
                         <div class="image-gallery">
@@ -668,9 +718,9 @@
                         </div>
                         <div class="image-counter">2 photos - Click to view larger</div>
                         <div class="map-section" style="margin:18px 0 18px 0;padding:14px 0 10px 0;text-align:center;background:#f6f8fa;border-radius:14px;">
-                            <div style="font-weight:600;font-size:1.08rem;margin-bottom:8px;color:#007cba;">Directions from Royal Kona Resort</div>
+                            <div style="font-weight:600;font-size:1.08rem;margin-bottom:8px;color:#007cba;">Directions from Rainbow Waterfall</div>
                             <a href="https://maps.apple.com/?daddr=Rainbow+Dr,+Hilo,+HI+96720&saddr=Royal+Kona+Resort,+75-5852+Alii+Dr,+Kailua-Kona,+HI+96740,+United+States&dirflg=d" target="_blank" style="display:inline-block;">
-                                <img src="rtow.png" alt="Directions to Rainbow Waterfall (from Royal Kona Resort)" style="width:100%;max-width:420px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:8px;">
+                                <img src="rtow.png" alt="Directions to Rainbow Waterfall (from Rainbow Waterfall)" style="width:100%;max-width:420px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:8px;">
                             </a>
                             <div><a href="https://maps.apple.com/?daddr=Rainbow+Dr,+Hilo,+HI+96720&saddr=Royal+Kona+Resort,+75-5852+Alii+Dr,+Kailua-Kona,+HI+96740,+United+States&dirflg=d" target="_blank" style="color:#007cba;text-decoration:underline;font-weight:500;font-size:1.01rem;">Open Directions in Apple Maps</a></div>
                         </div>
@@ -678,22 +728,14 @@
                     <div class="activity">
                         <div class="activity-time">Evening</div>
                         <div class="activity-title">
-                            Black Sand Beach
-                            <button class="info-btn" onclick="showInfoModal('Black Sand Beach', `Experience the unique beauty of Hawaii's black sand beaches, created by volcanic activity.<br/><br/><strong>About Black Sand Beaches:</strong><br/>• Formed when hot lava meets the ocean and shatters into tiny fragments<br/>• The black sand is actually tiny pieces of volcanic glass<br/>• These beaches are rare and found only in volcanic regions<br/>• Perfect for photography and experiencing Hawaii's volcanic landscape<br/><br/><strong>What to Expect:</strong><br/>• Stunning contrast between black sand and blue ocean<br/>• Unique photo opportunities<br/>• Often less crowded than white sand beaches<br/>• Great for sunset viewing<br/><br/><strong>Safety Notes:</strong><br/>• Be aware of ocean conditions<br/>• Black sand can get very hot in the sun<br/>• Some areas may have strong currents<br/>• Always check local conditions before swimming`, null, 'https://www.google.com/maps/search/black+sand+beach+hawaii+big+island', 'Google Maps search for black sand beaches on Hawaii Big Island')">Beach Info</button>
+                            🌅 Sunset Lava Glow (Optional Evening Return)
+                            <button class="info-btn" onclick="showInfoModal('Sunset Lava Glow at Hawaii Volcanoes National Park', `<strong>🌅 6:00 PM – 7:30 PM: Sunset Lava Glow Experience</strong><br><br><strong>Experience Overview:</strong><br>Return to the summit area after dark to witness the mesmerizing glow of active lava flows against the night sky. This optional evening adventure offers a completely different perspective of Hawaii's volcanic activity.<br><br><strong>What You'll See:</strong><br>• Spectacular lava glow illuminating the night sky<br>• Active lava flows visible from safe viewing distances<br>• Stunning contrast between the dark landscape and bright lava<br>• Unique photo opportunities of volcanic activity at night<br><br><strong>Best Viewing Locations:</strong><br>• <strong>Keanakāko'i Overlook</strong> - Prime viewing spot for lava flows<br>• <strong>Volcano House Back Patio</strong> - Elevated view with restaurant amenities<br>• <strong>Waldron Ledge</strong> - Intimate viewing area with clear sightlines<br><br><strong>Important Notes:</strong><br>• <strong>Conditions Permitting:</strong> Lava activity varies daily - check current conditions<br>• <strong>Timing:</strong> Best viewing typically 30-60 minutes after sunset<br>• <strong>Weather Dependent:</strong> Clear skies required for optimal viewing<br>• <strong>Safety:</strong> Stay in designated viewing areas only<br>• <strong>Photography:</strong> Bring tripod for long-exposure shots<br><br><strong>What to Bring:</strong><br>• Warm clothing (temperatures drop significantly at night)<br>• Flashlight or headlamp<br>• Camera with tripod for night photography<br>• Snacks and water<br>• Patience - lava viewing can require waiting<br><br><strong>Current Conditions:</strong><br>Check the <a href='https://volcanoes.usgs.gov/observatories/hvo/cams/V1cam/images/M.jpg' style='color:#007cba;text-decoration:underline;'>USGS Live Camera</a> for real-time lava activity before your visit.<br><br><strong>Getting There:</strong><br>• Return to the summit area of Hawaii Volcanoes National Park<br>• Allow 30-45 minutes from the Chain of Craters area<br>• Parking available at designated viewing areas<br><br><a href='https://www.nps.gov/havo/planyourvisit/lava2.htm' style='color:#007cba;text-decoration:underline;'>Official NPS Lava Viewing Information</a>`, 'https://volcanoes.usgs.gov/observatories/hvo/cams/V1cam/images/M.jpg', 'https://www.nps.gov/havo/planyourvisit/lava2.htm', 'Official National Park Service information about lava viewing and current conditions.')">Lava Info</button>
                         </div>
-                        <div class="activity-desc">Experience the unique beauty of Hawaii's black sand beaches, created by volcanic activity</div>
-                        <div class="image-gallery">
-                            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrCSvkamTZqxXUkopI-m1rzzUeIhoz8c7-AkNgfXyPwszTeCfD4ovAMkeGp4K-2Z-AGPhMRZL7Gd_D8VcUShr-EHfq6UAyoMcdPtEz56_SIkoz6t9cNoqBZA-ALBKSq2fEAhZXFTQ=s680-w680-h510-rw" alt="Black Sand Beach 1" class="gallery-image" onclick="showImageModal(this.src, 'Black Sand Beach 1')">
-                            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr9rgDNmxjx6oDWBi-rxoV5S5cLYNtPX5dkjpAa073Az48DovyBzhi6J-1n4Wp5ImVp13TpuyNrgidpV9Z5zsyy4UWUhvEJIkdU2VUo5jTOEyCYvbl6YsZlTWW40X2MybAkVvZH2g=s680-w680-h510-rw" alt="Black Sand Beach 2" class="gallery-image" onclick="showImageModal(this.src, 'Black Sand Beach 2')">
+                        <div class="activity-desc">Head back up to the summit area for after-dark lava glow (conditions permitting). Best night-time glow spots: Keanakāko'i, Volcano House back patio, or Waldron Ledge.</div>
+                        <div class="image-gallery" style="margin-bottom:10px;">
+                            <img src="https://volcanoes.usgs.gov/observatories/hvo/cams/V1cam/images/M.jpg" alt="Sunset Lava Glow" style="width:100%;max-height:180px;object-fit:cover;border-radius:18px;margin-bottom:14px;" onclick="showImageModal(this.src, 'Sunset Lava Glow')">
                         </div>
-                        <div class="image-counter">2 photos - Click to view larger</div>
-                        <div class="map-section" style="margin:18px 0 18px 0;padding:14px 0 10px 0;text-align:center;background:#f6f8fa;border-radius:14px;">
-                            <div style="font-weight:600;font-size:1.08rem;margin-bottom:8px;color:#007cba;">Directions from Hawaii Volcanoes National Park</div>
-                            <a href="https://maps.apple.com/?saddr=Hawai%CA%BBi+Volcanoes+National+Park,+HI+96778,+United+States&daddr=Black+Sand+Beach,+Hawaii+Big+Island&dirflg=d" target="_blank" style="display:inline-block;">
-                                <img src="vtoblk.png" alt="Directions to Black Sand Beach (from Hawaii Volcanoes National Park)" style="width:100%;max-width:420px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:8px;">
-                            </a>
-                            <div><a href="https://maps.apple.com/?saddr=Hawai%CA%BBi+Volcanoes+National+Park,+HI+96778,+United+States&daddr=Black+Sand+Beach,+Hawaii+Big+Island&dirflg=d" target="_blank" style="color:#007cba;text-decoration:underline;font-weight:500;font-size:1.01rem;">Open Directions in Apple Maps</a></div>
-                        </div>
+                        <div class="image-counter">1 photo - Click to view larger</div>
                     </div>
                 </div>
             </div>
